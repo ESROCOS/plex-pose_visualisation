@@ -37,6 +37,7 @@ FEATURES
 PROPERTIES
   Source_Language => (CPP);
   Taste::Active_Interfaces => any;
+  Source_Text => ("vizkit3drobotpose.zip");
 END vizkit3drobotpose;
 
 SYSTEM IMPLEMENTATION vizkit3drobotpose.others
@@ -77,7 +78,7 @@ END PI_updateRigidBodyState.others;
 SYSTEM vizkit3dmarkerpose
 FEATURES
   PI_updateRigidBodyState : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::PoseVisualisation::vizkit3dmarkerpose::PI_updateRigidBodyState.others {
-    Taste::coordinates => "190769 96806";
+    Taste::coordinates => "190769 96678";
     Taste::RCMoperationKind => sporadic;
     Taste::RCMperiod => 0 ms;
     Taste::Deadline => 0 ms;
@@ -86,6 +87,7 @@ FEATURES
 PROPERTIES
   Source_Language => (CPP);
   Taste::Active_Interfaces => enabled;
+  Source_Text => ("vizkit3dmarkerpose.zip");
 END vizkit3dmarkerpose;
 
 SYSTEM IMPLEMENTATION vizkit3dmarkerpose.others
@@ -190,6 +192,7 @@ FEATURES
 PROPERTIES
   Source_Language => (CPP);
   Taste::Active_Interfaces => any;
+  Source_Text => ("remapper.zip");
 END remapper;
 
 SYSTEM IMPLEMENTATION remapper.others
@@ -267,7 +270,7 @@ SUBCOMPONENTS
 --vizkit3d plugin RigidBodyStateVisualization. 
 --]
   vizkit3dmarkerpose : SYSTEM interfaceview::IV::PoseVisualisation::vizkit3dmarkerpose::vizkit3dmarkerpose.others {
-    Taste::coordinates => "190769 82406 217171 102808";
+    Taste::coordinates => "190769 82278 217171 102680";
   };
   remapper : SYSTEM interfaceview::IV::PoseVisualisation::remapper::remapper.others {
     Taste::coordinates => "138291 62805 167453 99938";
@@ -277,7 +280,7 @@ CONNECTIONS
     Taste::coordinates => "167453 69185 178601 69185 178601 71586 189750 71586";
   };
   vizkit3dmarkerpose_PI_updateRigidBodyState_remapper_RI_mbs_out : SUBPROGRAM ACCESS vizkit3dmarkerpose.PI_updateRigidBodyState -> remapper.RI_mbs_out {
-    Taste::coordinates => "167453 89728 179111 89728 179111 96806 190769 96806";
+    Taste::coordinates => "167453 89728 179111 89728 179111 96678 190769 96678";
   };
   remapper_PI_rbs_in_PoseVisualisation_PI_rbs_in : SUBPROGRAM ACCESS remapper.PI_rbs_in -> PI_rbs_in {
     Taste::coordinates => "134297 67244 136294 67244 136294 68640 138291 68640";

@@ -31,20 +31,20 @@ esrocos_init()
 ########### FOR INTEGRATION PROJECTS ##############
 
 #uncomment if you want to add dependencies for the build process (only required in integration projects)
-#esrocos_add_dependency(PARTITION <Name Of Partition>
-#                       MODULES   <PKG-Config findable module>[,secondmodule,thirdmodule...])
+esrocos_add_dependency(PARTITION x86_partition
+                       MODULES   plex-pose_visualisation)
 
 ########### FOR COMPONENT PROJECTS ################
 
 #uncomment if you want to export a function
-esrocos_export_function("remapper" "share/taste_components/remapper")
-esrocos_export_function("vizkit3drobotpose" "share/taste_components/vizkit3drobotpose")
-esrocos_export_function("vizkit3dmarkerpose" "share/taste_components/vizkit3dmarkerpose")
+esrocos_export_function("remapper" "share/taste_components/plex-pose_visualisation")
+esrocos_export_function("vizkit3drobotpose" "share/taste_components/plex-pose_visualisation")
+esrocos_export_function("vizkit3dmarkerpose" "share/taste_components/plex-pose_visualisation")
 
 #uncomment to export PKG-CONFIG-file
 esrocos_export_pkgconfig( VERSION 1.0
                           DESCRIPTION "none"
-                          REQUIRES base_support types-base 
+			  REQUIRES base_support base-types vizkit3d_taste vizkit3d vizkit3d-viz eigen3
                           LIBS ""
                           STATIC_LIBS "" 
                           C_FLAGS ""
