@@ -65,13 +65,7 @@ SKELS="./"
 # Check if Dataview references existing files 
 mono $(which taste-extract-asn-from-design.exe) -i "$INTERFACEVIEW" -j /tmp/dv.asn
 
-cd "$SKELS" && rm -f vizkit3drobotpose.zip && zip vizkit3drobotpose vizkit3drobotpose/* && cd $OLDPWD
-
-cd "$SKELS" && rm -f vizkit3dmarkerpose.zip && zip vizkit3dmarkerpose vizkit3dmarkerpose/* && cd $OLDPWD
-
-cd "$SKELS" && rm -f remapper.zip && zip remapper remapper/* && cd $OLDPWD
-
-cd "$SKELS" && rm -f dummyproducer.zip && zip dummyproducer dummyproducer/* && cd $OLDPWD
+cd "$SKELS" && rm -f dummyproducer.zip && zip -r dummyproducer dummyproducer/* && cd $OLDPWD || exit -1
 
 [ ! -z "$CLEANUP" ] && rm -rf binary*
 
@@ -113,9 +107,9 @@ cd "$CWD" && assert-builder-ocarina.py \
 	--interfaceView "$INTERFACEVIEW" \
 	--deploymentView "$DEPLOYMENTVIEW" \
 	-o "$OUTPUTDIR" \
-	--subCPP vizkit3drobotpose:"$SKELS"/vizkit3drobotpose.zip \
-	--subCPP vizkit3dmarkerpose:"$SKELS"/vizkit3dmarkerpose.zip \
-	--subCPP remapper:"$SKELS"/remapper.zip \
+	--subCPP vizkit3drobotpose:vizkit3drobotpose.zip \
+	--subCPP vizkit3dmarkerpose:vizkit3dmarkerpose.zip \
+	--subCPP remapper:remapper.zip \
 	--subCPP dummyproducer:"$SKELS"/dummyproducer.zip \
 	$ORCHESTRATOR_OPTIONS
 

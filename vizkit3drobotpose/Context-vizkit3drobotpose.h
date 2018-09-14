@@ -21,8 +21,8 @@ flag asn1SccContext_vizkit3drobotpose_Equal(const asn1SccContext_vizkit3drobotpo
 
 void asn1SccContext_vizkit3drobotpose_Initialize(asn1SccContext_vizkit3drobotpose* pVal);
 
-#define ERR_CONTEXT_VIZKIT3DROBOTPOSE_CONFIGFILE		1  /**/
-#define ERR_CONTEXT_VIZKIT3DROBOTPOSE_ID		12  /**/
+#define ERR_CONTEXT_VIZKIT3D_RIGIDBODYSTATE_CONFIGFILE		1  /**/
+#define ERR_CONTEXT_VIZKIT3D_RIGIDBODYSTATE_ID		12  /**/
 flag asn1SccContext_vizkit3drobotpose_IsConstraintValid(const asn1SccContext_vizkit3drobotpose* pVal, int* pErrCode);
 
 extern const asn1SccContext_vizkit3drobotpose vizkit3drobotpose_ctxt; 

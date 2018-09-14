@@ -12,12 +12,12 @@ extern "C" {
 
 
 typedef enum {
-    asn1Sccbase_jointstate_mode_acceleration = 0,
-    asn1Sccbase_jointstate_mode_effort = 1,
-    asn1Sccbase_jointstate_mode_position = 2,
-    asn1Sccbase_jointstate_mode_raw = 3,
-    asn1Sccbase_jointstate_mode_speed = 4,
-    asn1Sccbase_jointstate_mode_unset = 5
+    asn1Sccacceleration = 0,
+    asn1Scceffort = 1,
+    asn1Sccposition = 2,
+    asn1Sccraw = 3,
+    asn1Sccspeed = 4,
+    asn1Sccunset = 5
 } asn1SccBase_JointState_MODE;
 
 flag asn1SccBase_JointState_MODE_Equal(const asn1SccBase_JointState_MODE* pVal1, const asn1SccBase_JointState_MODE* pVal2);
@@ -28,9 +28,9 @@ void asn1SccBase_JointState_MODE_Initialize(asn1SccBase_JointState_MODE* pVal);
 flag asn1SccBase_JointState_MODE_IsConstraintValid(const asn1SccBase_JointState_MODE* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_time_resolution_microseconds = 0,
-    asn1Sccbase_time_resolution_milliseconds = 1,
-    asn1Sccbase_time_resolution_seconds = 2
+    asn1Sccmicroseconds = 0,
+    asn1Sccmilliseconds = 1,
+    asn1Sccseconds = 2
 } asn1SccBase_Time_Resolution;
 
 flag asn1SccBase_Time_Resolution_Equal(const asn1SccBase_Time_Resolution* pVal1, const asn1SccBase_Time_Resolution* pVal2);
@@ -41,14 +41,14 @@ void asn1SccBase_Time_Resolution_Initialize(asn1SccBase_Time_Resolution* pVal);
 flag asn1SccBase_Time_Resolution_IsConstraintValid(const asn1SccBase_Time_Resolution* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_next = 0,
-    asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_prior = 1,
-    asn1Sccbase_geometry_splinebase_coordinatetype_knuckle_point = 2,
-    asn1Sccbase_geometry_splinebase_coordinatetype_ordinary_point = 3,
-    asn1Sccbase_geometry_splinebase_coordinatetype_second_derivative_to_next = 4,
-    asn1Sccbase_geometry_splinebase_coordinatetype_second_derivative_to_prior = 5,
-    asn1Sccbase_geometry_splinebase_coordinatetype_tangent_point_for_next = 6,
-    asn1Sccbase_geometry_splinebase_coordinatetype_tangent_point_for_prior = 7
+    asn1Sccderivative_to_next = 0,
+    asn1Sccderivative_to_prior = 1,
+    asn1Sccknuckle_point = 2,
+    asn1Sccordinary_point = 3,
+    asn1Sccsecond_derivative_to_next = 4,
+    asn1Sccsecond_derivative_to_prior = 5,
+    asn1Scctangent_point_for_next = 6,
+    asn1Scctangent_point_for_prior = 7
 } asn1SccBase_geometry_SplineBase_CoordinateType;
 
 flag asn1SccBase_geometry_SplineBase_CoordinateType_Equal(const asn1SccBase_geometry_SplineBase_CoordinateType* pVal1, const asn1SccBase_geometry_SplineBase_CoordinateType* pVal2);
@@ -59,10 +59,10 @@ void asn1SccBase_geometry_SplineBase_CoordinateType_Initialize(asn1SccBase_geome
 flag asn1SccBase_geometry_SplineBase_CoordinateType_IsConstraintValid(const asn1SccBase_geometry_SplineBase_CoordinateType* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_samples_depthmap_depth_measurement_state_measurement_error = 0,
-    asn1Sccbase_samples_depthmap_depth_measurement_state_too_far = 1,
-    asn1Sccbase_samples_depthmap_depth_measurement_state_too_near = 2,
-    asn1Sccbase_samples_depthmap_depth_measurement_state_valid_measurement = 3
+    asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_measurement_error = 0,
+    asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_too_far = 1,
+    asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_too_near = 2,
+    asn1Sccvalid_measurement = 3
 } asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE;
 
 flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Equal(const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal1, const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal2);
@@ -73,8 +73,8 @@ void asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Initialize(asn1SccBase
 flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_IsConstraintValid(const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_samples_depthmap_projection_type_planar = 0,
-    asn1Sccbase_samples_depthmap_projection_type_polar = 1
+    asn1Sccplanar = 0,
+    asn1Sccpolar = 1
 } asn1SccBase_samples_DepthMap_PROJECTION_TYPE;
 
 flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Equal(const asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal1, const asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal2);
@@ -85,9 +85,9 @@ void asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Initialize(asn1SccBase_samples
 flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_IsConstraintValid(const asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_samples_depthmap_unit_axis_unit_x = 0,
-    asn1Sccbase_samples_depthmap_unit_axis_unit_y = 1,
-    asn1Sccbase_samples_depthmap_unit_axis_unit_z = 2
+    asn1Sccunit_x = 0,
+    asn1Sccunit_y = 1,
+    asn1Sccunit_z = 2
 } asn1SccBase_samples_DepthMap_UNIT_AXIS;
 
 flag asn1SccBase_samples_DepthMap_UNIT_AXIS_Equal(const asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal1, const asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal2);
@@ -98,12 +98,12 @@ void asn1SccBase_samples_DepthMap_UNIT_AXIS_Initialize(asn1SccBase_samples_Depth
 flag asn1SccBase_samples_DepthMap_UNIT_AXIS_IsConstraintValid(const asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_samples_laser_range_errors_end_laser_range_errors = 0,
-    asn1Sccbase_samples_laser_range_errors_max_range_error = 1,
-    asn1Sccbase_samples_laser_range_errors_measurement_error = 2,
-    asn1Sccbase_samples_laser_range_errors_other_range_errors = 3,
-    asn1Sccbase_samples_laser_range_errors_too_far = 4,
-    asn1Sccbase_samples_laser_range_errors_too_near = 5
+    asn1Sccend_laser_range_errors = 0,
+    asn1Sccmax_range_error = 1,
+    asn1SccBase_samples_LASER_RANGE_ERRORS_measurement_error = 2,
+    asn1Sccother_range_errors = 3,
+    asn1SccBase_samples_LASER_RANGE_ERRORS_too_far = 4,
+    asn1SccBase_samples_LASER_RANGE_ERRORS_too_near = 5
 } asn1SccBase_samples_LASER_RANGE_ERRORS;
 
 flag asn1SccBase_samples_LASER_RANGE_ERRORS_Equal(const asn1SccBase_samples_LASER_RANGE_ERRORS* pVal1, const asn1SccBase_samples_LASER_RANGE_ERRORS* pVal2);
@@ -114,22 +114,22 @@ void asn1SccBase_samples_LASER_RANGE_ERRORS_Initialize(asn1SccBase_samples_LASER
 flag asn1SccBase_samples_LASER_RANGE_ERRORS_IsConstraintValid(const asn1SccBase_samples_LASER_RANGE_ERRORS* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_samples_frame_frame_mode_t_compressed_modes = 0,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_bayer = 1,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_bggr = 2,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_gbrg = 3,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_grbg = 4,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_rggb = 5,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_bgr = 6,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_grayscale = 7,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_jpeg = 8,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_pjpg = 9,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_png = 10,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_rgb = 11,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_rgb32 = 12,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_undefined = 13,
-    asn1Sccbase_samples_frame_frame_mode_t_mode_uyvy = 14,
-    asn1Sccbase_samples_frame_frame_mode_t_raw_modes = 15
+    asn1Scccompressed_modes = 0,
+    asn1Sccmode_bayer = 1,
+    asn1Sccmode_bayer_bggr = 2,
+    asn1Sccmode_bayer_gbrg = 3,
+    asn1Sccmode_bayer_grbg = 4,
+    asn1Sccmode_bayer_rggb = 5,
+    asn1Sccmode_bgr = 6,
+    asn1Sccmode_grayscale = 7,
+    asn1Sccmode_jpeg = 8,
+    asn1Sccmode_pjpg = 9,
+    asn1Sccmode_png = 10,
+    asn1Sccmode_rgb = 11,
+    asn1Sccmode_rgb32 = 12,
+    asn1Sccmode_undefined = 13,
+    asn1Sccmode_uyvy = 14,
+    asn1Sccraw_modes = 15
 } asn1SccBase_samples_frame_frame_mode_t;
 
 flag asn1SccBase_samples_frame_frame_mode_t_Equal(const asn1SccBase_samples_frame_frame_mode_t* pVal1, const asn1SccBase_samples_frame_frame_mode_t* pVal2);
@@ -140,9 +140,9 @@ void asn1SccBase_samples_frame_frame_mode_t_Initialize(asn1SccBase_samples_frame
 flag asn1SccBase_samples_frame_frame_mode_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_mode_t* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccbase_samples_frame_frame_status_t_status_empty = 0,
-    asn1Sccbase_samples_frame_frame_status_t_status_invalid = 1,
-    asn1Sccbase_samples_frame_frame_status_t_status_valid = 2
+    asn1Sccstatus_empty = 0,
+    asn1Sccstatus_invalid = 1,
+    asn1Sccstatus_valid = 2
 } asn1SccBase_samples_frame_frame_status_t;
 
 flag asn1SccBase_samples_frame_frame_status_t_Equal(const asn1SccBase_samples_frame_frame_status_t* pVal1, const asn1SccBase_samples_frame_frame_status_t* pVal2);
@@ -153,11 +153,11 @@ void asn1SccBase_samples_frame_frame_status_t_Initialize(asn1SccBase_samples_fra
 flag asn1SccBase_samples_frame_frame_status_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_status_t* pVal, int* pErrCode);
 
 typedef enum {
-    asn1Sccwrappers_geometry_splinetype_degenerate = 0,
-    asn1Sccwrappers_geometry_splinetype_polynomial_bezier = 1,
-    asn1Sccwrappers_geometry_splinetype_polynomial_bspline = 2,
-    asn1Sccwrappers_geometry_splinetype_rational_bezier = 3,
-    asn1Sccwrappers_geometry_splinetype_rational_bspline = 4
+    asn1Sccdegenerate = 0,
+    asn1Sccpolynomial_bezier = 1,
+    asn1Sccpolynomial_bspline = 2,
+    asn1Sccrational_bezier = 3,
+    asn1Sccrational_bspline = 4
 } asn1SccWrappers_geometry_SplineType;
 
 flag asn1SccWrappers_geometry_SplineType_Equal(const asn1SccWrappers_geometry_SplineType* pVal1, const asn1SccWrappers_geometry_SplineType* pVal2);
@@ -173,7 +173,7 @@ flag asn1SccT_Double_Equal(const asn1SccT_Double* pVal1, const asn1SccT_Double* 
 
 void asn1SccT_Double_Initialize(asn1SccT_Double* pVal);
 
-#define ERR_T_DOUBLE		7983  /**/
+#define ERR_T_DOUBLE		8038  /**/
 flag asn1SccT_Double_IsConstraintValid(const asn1SccT_Double* pVal, int* pErrCode);
 
 typedef struct {
@@ -264,9 +264,9 @@ flag asn1SccWrappers_AngleAxisd_Equal(const asn1SccWrappers_AngleAxisd* pVal1, c
 void asn1SccWrappers_AngleAxisd_axis_Initialize(asn1SccWrappers_AngleAxisd_axis* pVal);
 void asn1SccWrappers_AngleAxisd_Initialize(asn1SccWrappers_AngleAxisd* pVal);
 
-#define ERR_WRAPPERS_ANGLEAXISD_ANGLE		5528  /**/
-#define ERR_WRAPPERS_ANGLEAXISD_AXIS_ELM		5539  /**/
-#define ERR_WRAPPERS_ANGLEAXISD_AXIS		5550  /**/
+#define ERR_WRAPPERS_ANGLEAXISD_ANGLE		5583  /**/
+#define ERR_WRAPPERS_ANGLEAXISD_AXIS_ELM		5594  /**/
+#define ERR_WRAPPERS_ANGLEAXISD_AXIS		5605  /**/
 flag asn1SccWrappers_AngleAxisd_IsConstraintValid(const asn1SccWrappers_AngleAxisd* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -285,8 +285,8 @@ flag asn1SccWrappers_Vector2d_Equal(const asn1SccWrappers_Vector2d* pVal1, const
 void asn1SccWrappers_Vector2d_data_Initialize(asn1SccWrappers_Vector2d_data* pVal);
 void asn1SccWrappers_Vector2d_Initialize(asn1SccWrappers_Vector2d* pVal);
 
-#define ERR_WRAPPERS_VECTOR2D_DATA_ELM		5563  /**/
-#define ERR_WRAPPERS_VECTOR2D_DATA		5574  /**/
+#define ERR_WRAPPERS_VECTOR2D_DATA_ELM		5618  /**/
+#define ERR_WRAPPERS_VECTOR2D_DATA		5629  /**/
 flag asn1SccWrappers_Vector2d_IsConstraintValid(const asn1SccWrappers_Vector2d* pVal, int* pErrCode);
 
 typedef struct {
@@ -312,9 +312,9 @@ flag asn1SccBase_Pose2D_m_Equal(const asn1SccBase_Pose2D_m* pVal1, const asn1Scc
 
 void asn1SccBase_Pose2D_m_Initialize(asn1SccBase_Pose2D_m* pVal);
 
-#define ERR_BASE_POSE2D_M_POSITION_DATA_ELM		5916  /**/
-#define ERR_BASE_POSE2D_M_POSITION_DATA		5927  /**/
-#define ERR_BASE_POSE2D_M_ORIENTATION		5944  /**/
+#define ERR_BASE_POSE2D_M_POSITION_DATA_ELM		5971  /**/
+#define ERR_BASE_POSE2D_M_POSITION_DATA		5982  /**/
+#define ERR_BASE_POSE2D_M_ORIENTATION		5999  /**/
 flag asn1SccBase_Pose2D_m_IsConstraintValid(const asn1SccBase_Pose2D_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -333,8 +333,8 @@ flag asn1SccWrappers_Matrix2d_Equal(const asn1SccWrappers_Matrix2d* pVal1, const
 void asn1SccWrappers_Matrix2d_data_Initialize(asn1SccWrappers_Matrix2d_data* pVal);
 void asn1SccWrappers_Matrix2d_Initialize(asn1SccWrappers_Matrix2d* pVal);
 
-#define ERR_WRAPPERS_MATRIX2D_DATA_ELM		5587  /**/
-#define ERR_WRAPPERS_MATRIX2D_DATA		5598  /**/
+#define ERR_WRAPPERS_MATRIX2D_DATA_ELM		5642  /**/
+#define ERR_WRAPPERS_MATRIX2D_DATA		5653  /**/
 flag asn1SccWrappers_Matrix2d_IsConstraintValid(const asn1SccWrappers_Matrix2d* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -353,8 +353,8 @@ flag asn1SccWrappers_Vector3d_Equal(const asn1SccWrappers_Vector3d* pVal1, const
 void asn1SccWrappers_Vector3d_data_Initialize(asn1SccWrappers_Vector3d_data* pVal);
 void asn1SccWrappers_Vector3d_Initialize(asn1SccWrappers_Vector3d* pVal);
 
-#define ERR_WRAPPERS_VECTOR3D_DATA_ELM		5611  /**/
-#define ERR_WRAPPERS_VECTOR3D_DATA		5622  /**/
+#define ERR_WRAPPERS_VECTOR3D_DATA_ELM		5666  /**/
+#define ERR_WRAPPERS_VECTOR3D_DATA		5677  /**/
 flag asn1SccWrappers_Vector3d_IsConstraintValid(const asn1SccWrappers_Vector3d* pVal, int* pErrCode);
 
 typedef struct {
@@ -401,11 +401,11 @@ flag asn1SccBase_Waypoint_m_Equal(const asn1SccBase_Waypoint_m* pVal1, const asn
 
 void asn1SccBase_Waypoint_m_Initialize(asn1SccBase_Waypoint_m* pVal);
 
-#define ERR_BASE_WAYPOINT_M_POSITION_DATA_ELM		6225  /**/
-#define ERR_BASE_WAYPOINT_M_POSITION_DATA		6236  /**/
-#define ERR_BASE_WAYPOINT_M_HEADING		6253  /**/
-#define ERR_BASE_WAYPOINT_M_TOL_POSITION		6264  /**/
-#define ERR_BASE_WAYPOINT_M_TOL_HEADING		6275  /**/
+#define ERR_BASE_WAYPOINT_M_POSITION_DATA_ELM		6280  /**/
+#define ERR_BASE_WAYPOINT_M_POSITION_DATA		6291  /**/
+#define ERR_BASE_WAYPOINT_M_HEADING		6308  /**/
+#define ERR_BASE_WAYPOINT_M_TOL_POSITION		6319  /**/
+#define ERR_BASE_WAYPOINT_M_TOL_HEADING		6330  /**/
 flag asn1SccBase_Waypoint_m_IsConstraintValid(const asn1SccBase_Waypoint_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -434,10 +434,10 @@ flag asn1SccBase_Wrench_m_Equal(const asn1SccBase_Wrench_m* pVal1, const asn1Scc
 
 void asn1SccBase_Wrench_m_Initialize(asn1SccBase_Wrench_m* pVal);
 
-#define ERR_BASE_WRENCH_M_FORCE_DATA_ELM		6292  /**/
-#define ERR_BASE_WRENCH_M_FORCE_DATA		6303  /**/
-#define ERR_BASE_WRENCH_M_TORQUE_DATA_ELM		6320  /**/
-#define ERR_BASE_WRENCH_M_TORQUE_DATA		6331  /**/
+#define ERR_BASE_WRENCH_M_FORCE_DATA_ELM		6347  /**/
+#define ERR_BASE_WRENCH_M_FORCE_DATA		6358  /**/
+#define ERR_BASE_WRENCH_M_TORQUE_DATA_ELM		6375  /**/
+#define ERR_BASE_WRENCH_M_TORQUE_DATA		6386  /**/
 flag asn1SccBase_Wrench_m_IsConstraintValid(const asn1SccBase_Wrench_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -472,8 +472,8 @@ flag asn1SccWrappers_Matrix3d_Equal(const asn1SccWrappers_Matrix3d* pVal1, const
 void asn1SccWrappers_Matrix3d_data_Initialize(asn1SccWrappers_Matrix3d_data* pVal);
 void asn1SccWrappers_Matrix3d_Initialize(asn1SccWrappers_Matrix3d* pVal);
 
-#define ERR_WRAPPERS_MATRIX3D_DATA_ELM		5635  /**/
-#define ERR_WRAPPERS_MATRIX3D_DATA		5646  /**/
+#define ERR_WRAPPERS_MATRIX3D_DATA_ELM		5690  /**/
+#define ERR_WRAPPERS_MATRIX3D_DATA		5701  /**/
 flag asn1SccWrappers_Matrix3d_IsConstraintValid(const asn1SccWrappers_Matrix3d* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -492,8 +492,8 @@ flag asn1SccWrappers_Vector4d_Equal(const asn1SccWrappers_Vector4d* pVal1, const
 void asn1SccWrappers_Vector4d_data_Initialize(asn1SccWrappers_Vector4d_data* pVal);
 void asn1SccWrappers_Vector4d_Initialize(asn1SccWrappers_Vector4d* pVal);
 
-#define ERR_WRAPPERS_VECTOR4D_DATA_ELM		5659  /**/
-#define ERR_WRAPPERS_VECTOR4D_DATA		5670  /**/
+#define ERR_WRAPPERS_VECTOR4D_DATA_ELM		5714  /**/
+#define ERR_WRAPPERS_VECTOR4D_DATA		5725  /**/
 flag asn1SccWrappers_Vector4d_IsConstraintValid(const asn1SccWrappers_Vector4d* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -526,8 +526,8 @@ flag asn1SccWrappers_Matrix4d_Equal(const asn1SccWrappers_Matrix4d* pVal1, const
 void asn1SccWrappers_Matrix4d_data_Initialize(asn1SccWrappers_Matrix4d_data* pVal);
 void asn1SccWrappers_Matrix4d_Initialize(asn1SccWrappers_Matrix4d* pVal);
 
-#define ERR_WRAPPERS_MATRIX4D_DATA_ELM		5683  /**/
-#define ERR_WRAPPERS_MATRIX4D_DATA		5694  /**/
+#define ERR_WRAPPERS_MATRIX4D_DATA_ELM		5738  /**/
+#define ERR_WRAPPERS_MATRIX4D_DATA		5749  /**/
 flag asn1SccWrappers_Matrix4d_IsConstraintValid(const asn1SccWrappers_Matrix4d* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -546,8 +546,8 @@ flag asn1SccWrappers_Vector6d_Equal(const asn1SccWrappers_Vector6d* pVal1, const
 void asn1SccWrappers_Vector6d_data_Initialize(asn1SccWrappers_Vector6d_data* pVal);
 void asn1SccWrappers_Vector6d_Initialize(asn1SccWrappers_Vector6d* pVal);
 
-#define ERR_WRAPPERS_VECTOR6D_DATA_ELM		5707  /**/
-#define ERR_WRAPPERS_VECTOR6D_DATA		5718  /**/
+#define ERR_WRAPPERS_VECTOR6D_DATA_ELM		5762  /**/
+#define ERR_WRAPPERS_VECTOR6D_DATA		5773  /**/
 flag asn1SccWrappers_Vector6d_IsConstraintValid(const asn1SccWrappers_Vector6d* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -566,8 +566,8 @@ flag asn1SccWrappers_Matrix6d_Equal(const asn1SccWrappers_Matrix6d* pVal1, const
 void asn1SccWrappers_Matrix6d_data_Initialize(asn1SccWrappers_Matrix6d_data* pVal);
 void asn1SccWrappers_Matrix6d_Initialize(asn1SccWrappers_Matrix6d* pVal);
 
-#define ERR_WRAPPERS_MATRIX6D_DATA_ELM		5731  /**/
-#define ERR_WRAPPERS_MATRIX6D_DATA		5742  /**/
+#define ERR_WRAPPERS_MATRIX6D_DATA_ELM		5786  /**/
+#define ERR_WRAPPERS_MATRIX6D_DATA		5797  /**/
 flag asn1SccWrappers_Matrix6d_IsConstraintValid(const asn1SccWrappers_Matrix6d* pVal, int* pErrCode);
 
 typedef struct {
@@ -598,12 +598,12 @@ flag asn1SccBase_TwistWithCovariance_m_Equal(const asn1SccBase_TwistWithCovarian
 
 void asn1SccBase_TwistWithCovariance_m_Initialize(asn1SccBase_TwistWithCovariance_m* pVal);
 
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA_ELM		6135  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA		6146  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA_ELM		6163  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA		6174  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA_ELM		6191  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA		6202  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA_ELM		6190  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA		6201  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA_ELM		6218  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA		6229  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA_ELM		6246  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA		6257  /**/
 flag asn1SccBase_TwistWithCovariance_m_IsConstraintValid(const asn1SccBase_TwistWithCovariance_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -623,9 +623,9 @@ flag asn1SccWrappers_Quaterniond_Equal(const asn1SccWrappers_Quaterniond* pVal1,
 void asn1SccWrappers_Quaterniond_im_Initialize(asn1SccWrappers_Quaterniond_im* pVal);
 void asn1SccWrappers_Quaterniond_Initialize(asn1SccWrappers_Quaterniond* pVal);
 
-#define ERR_WRAPPERS_QUATERNIOND_IM_ELM		5801  /**/
-#define ERR_WRAPPERS_QUATERNIOND_IM		5812  /**/
-#define ERR_WRAPPERS_QUATERNIOND_RE		5819  /**/
+#define ERR_WRAPPERS_QUATERNIOND_IM_ELM		5856  /**/
+#define ERR_WRAPPERS_QUATERNIOND_IM		5867  /**/
+#define ERR_WRAPPERS_QUATERNIOND_RE		5874  /**/
 flag asn1SccWrappers_Quaterniond_IsConstraintValid(const asn1SccWrappers_Quaterniond* pVal, int* pErrCode);
 
 typedef struct {
@@ -672,11 +672,11 @@ flag asn1SccBase_Pose_m_Equal(const asn1SccBase_Pose_m* pVal1, const asn1SccBase
 
 void asn1SccBase_Pose_m_Initialize(asn1SccBase_Pose_m* pVal);
 
-#define ERR_BASE_POSE_M_POSITION_DATA_ELM		5961  /**/
-#define ERR_BASE_POSE_M_POSITION_DATA		5972  /**/
-#define ERR_BASE_POSE_M_ORIENTATION_IM_ELM		5989  /**/
-#define ERR_BASE_POSE_M_ORIENTATION_IM		6000  /**/
-#define ERR_BASE_POSE_M_ORIENTATION_RE		6007  /**/
+#define ERR_BASE_POSE_M_POSITION_DATA_ELM		6016  /**/
+#define ERR_BASE_POSE_M_POSITION_DATA		6027  /**/
+#define ERR_BASE_POSE_M_ORIENTATION_IM_ELM		6044  /**/
+#define ERR_BASE_POSE_M_ORIENTATION_IM		6055  /**/
+#define ERR_BASE_POSE_M_ORIENTATION_RE		6062  /**/
 flag asn1SccBase_Pose_m_IsConstraintValid(const asn1SccBase_Pose_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -689,13 +689,13 @@ flag asn1SccBase_TransformWithCovariance_m_Equal(const asn1SccBase_TransformWith
 
 void asn1SccBase_TransformWithCovariance_m_Initialize(asn1SccBase_TransformWithCovariance_m* pVal);
 
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA_ELM		6034  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA		6045  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM_ELM		6062  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM		6073  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_RE		6080  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA_ELM		6101  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA		6112  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA_ELM		6089  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA		6100  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM_ELM		6117  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM		6128  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_RE		6135  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA_ELM		6156  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA		6167  /**/
 flag asn1SccBase_TransformWithCovariance_m_IsConstraintValid(const asn1SccBase_TransformWithCovariance_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -714,8 +714,8 @@ flag asn1SccWrappers_VectorXd_Equal(const asn1SccWrappers_VectorXd* pVal1, const
 void asn1SccWrappers_VectorXd_data_Initialize(asn1SccWrappers_VectorXd_data* pVal);
 void asn1SccWrappers_VectorXd_Initialize(asn1SccWrappers_VectorXd* pVal);
 
-#define ERR_WRAPPERS_VECTORXD_DATA_ELM		5836  /**/
-#define ERR_WRAPPERS_VECTORXD_DATA		5847  /**/
+#define ERR_WRAPPERS_VECTORXD_DATA_ELM		5891  /**/
+#define ERR_WRAPPERS_VECTORXD_DATA		5902  /**/
 flag asn1SccWrappers_VectorXd_IsConstraintValid(const asn1SccWrappers_VectorXd* pVal, int* pErrCode);
 typedef double asn1SccT_Float;
 
@@ -724,7 +724,7 @@ flag asn1SccT_Float_Equal(const asn1SccT_Float* pVal1, const asn1SccT_Float* pVa
 
 void asn1SccT_Float_Initialize(asn1SccT_Float* pVal);
 
-#define ERR_T_FLOAT		7990  /**/
+#define ERR_T_FLOAT		8045  /**/
 flag asn1SccT_Float_IsConstraintValid(const asn1SccT_Float* pVal, int* pErrCode);
 
 typedef struct {
@@ -801,7 +801,7 @@ flag asn1SccT_Int16_Equal(const asn1SccT_Int16* pVal1, const asn1SccT_Int16* pVa
 
 void asn1SccT_Int16_Initialize(asn1SccT_Int16* pVal);
 
-#define ERR_T_INT16		7997  /**/
+#define ERR_T_INT16		8052  /**/
 flag asn1SccT_Int16_IsConstraintValid(const asn1SccT_Int16* pVal, int* pErrCode);
 typedef asn1SccUint asn1SccT_UInt16;
 
@@ -810,7 +810,7 @@ flag asn1SccT_UInt16_Equal(const asn1SccT_UInt16* pVal1, const asn1SccT_UInt16* 
 
 void asn1SccT_UInt16_Initialize(asn1SccT_UInt16* pVal);
 
-#define ERR_T_UINT16		8004  /**/
+#define ERR_T_UINT16		8059  /**/
 flag asn1SccT_UInt16_IsConstraintValid(const asn1SccT_UInt16* pVal, int* pErrCode);
 
 typedef struct {
@@ -832,7 +832,7 @@ flag asn1SccT_UInt64_Equal(const asn1SccT_UInt64* pVal1, const asn1SccT_UInt64* 
 
 void asn1SccT_UInt64_Initialize(asn1SccT_UInt64* pVal);
 
-#define ERR_T_UINT64		8011  /**/
+#define ERR_T_UINT64		8066  /**/
 flag asn1SccT_UInt64_IsConstraintValid(const asn1SccT_UInt64* pVal, int* pErrCode);
 typedef asn1SccSint asn1SccT_Int64;
 
@@ -841,7 +841,7 @@ flag asn1SccT_Int64_Equal(const asn1SccT_Int64* pVal1, const asn1SccT_Int64* pVa
 
 void asn1SccT_Int64_Initialize(asn1SccT_Int64* pVal);
 
-#define ERR_T_INT64		8018  /**/
+#define ERR_T_INT64		8073  /**/
 flag asn1SccT_Int64_IsConstraintValid(const asn1SccT_Int64* pVal, int* pErrCode);
 
 typedef struct {
@@ -1075,38 +1075,6 @@ void asn1SccBase_samples_Pointcloud_Initialize(asn1SccBase_samples_Pointcloud* p
 flag asn1SccBase_samples_Pointcloud_IsConstraintValid(const asn1SccBase_samples_Pointcloud* pVal, int* pErrCode);
 
 typedef struct {
-    int nCount; 
-    
-    byte arr[200];
-} asn1SccBase_samples_SonarBeam_beam;
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccBase_Angle bearing;
-    asn1SccT_Double sampling_interval;
-    asn1SccT_Float speed_of_sound;
-    asn1SccT_Float beamwidth_horizontal;
-    asn1SccT_Float beamwidth_vertical;
-    asn1SccBase_samples_SonarBeam_beam beam;
-} asn1SccBase_samples_SonarBeam;
-
-flag asn1SccBase_samples_SonarBeam_beam_Equal(const asn1SccBase_samples_SonarBeam_beam* pVal1, const asn1SccBase_samples_SonarBeam_beam* pVal2);
-
-flag asn1SccBase_samples_SonarBeam_Equal(const asn1SccBase_samples_SonarBeam* pVal1, const asn1SccBase_samples_SonarBeam* pVal2);
-
-void asn1SccBase_samples_SonarBeam_beam_Initialize(asn1SccBase_samples_SonarBeam_beam* pVal);
-void asn1SccBase_samples_SonarBeam_Initialize(asn1SccBase_samples_SonarBeam* pVal);
-
-#define ERR_BASE_SAMPLES_SONARBEAM_TIME_MICROSECONDS		4300  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEARING_RAD		4321  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL		4342  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND		4353  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL		4364  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL		4375  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEAM		4386  /**/
-flag asn1SccBase_samples_SonarBeam_IsConstraintValid(const asn1SccBase_samples_SonarBeam* pVal, int* pErrCode);
-
-typedef struct {
     asn1SccBase_Time time;
     asn1SccWrappers_Vector3d linear;
     asn1SccWrappers_Vector3d angular;
@@ -1116,11 +1084,11 @@ flag asn1SccBase_commands_LinearAngular6DCommand_m_Equal(const asn1SccBase_comma
 
 void asn1SccBase_commands_LinearAngular6DCommand_m_Initialize(asn1SccBase_commands_LinearAngular6DCommand_m* pVal);
 
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_MICROSECONDS		6354  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA_ELM		6375  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA		6386  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA_ELM		6403  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA		6414  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_MICROSECONDS		6409  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA_ELM		6430  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA		6441  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA_ELM		6458  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA		6469  /**/
 flag asn1SccBase_commands_LinearAngular6DCommand_m_IsConstraintValid(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -1133,20 +1101,20 @@ flag asn1SccBase_samples_BodyState_m_Equal(const asn1SccBase_samples_BodyState_m
 
 void asn1SccBase_samples_BodyState_m_Initialize(asn1SccBase_samples_BodyState_m* pVal);
 
-#define ERR_BASE_SAMPLES_BODYSTATE_M_TIME_MICROSECONDS		6437  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA_ELM		6458  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA		6469  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM_ELM		6486  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM		6497  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_RE		6504  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA_ELM		6525  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA		6536  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA_ELM		6563  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA		6574  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA_ELM		6591  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA		6602  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA_ELM		6619  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA		6630  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_TIME_MICROSECONDS		6492  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA_ELM		6513  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA		6524  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM_ELM		6541  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM		6552  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_RE		6559  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA_ELM		6580  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA		6591  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA_ELM		6618  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA		6629  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA_ELM		6646  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA		6657  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA_ELM		6674  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA		6685  /**/
 flag asn1SccBase_samples_BodyState_m_IsConstraintValid(const asn1SccBase_samples_BodyState_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -1160,13 +1128,13 @@ flag asn1SccBase_samples_IMUSensors_m_Equal(const asn1SccBase_samples_IMUSensors
 
 void asn1SccBase_samples_IMUSensors_m_Initialize(asn1SccBase_samples_IMUSensors_m* pVal);
 
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_TIME_MICROSECONDS		6663  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA_ELM		6684  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA		6695  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA_ELM		6712  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA		6723  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA_ELM		6740  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA		6751  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_TIME_MICROSECONDS		6718  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA_ELM		6739  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA		6750  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA_ELM		6767  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA		6778  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA_ELM		6795  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA		6806  /**/
 flag asn1SccBase_samples_IMUSensors_m_IsConstraintValid(const asn1SccBase_samples_IMUSensors_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -1181,15 +1149,15 @@ flag asn1SccBase_samples_RigidBodyAcceleration_m_Equal(const asn1SccBase_samples
 
 void asn1SccBase_samples_RigidBodyAcceleration_m_Initialize(asn1SccBase_samples_RigidBodyAcceleration_m* pVal);
 
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_MICROSECONDS		6774  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA_ELM		6795  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA		6806  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA_ELM		6823  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA		6834  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA_ELM		6851  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA		6862  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA_ELM		6879  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA		6890  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_MICROSECONDS		6829  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA_ELM		6850  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA		6861  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA_ELM		6878  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA		6889  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA_ELM		6906  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA		6917  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA_ELM		6934  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA		6945  /**/
 flag asn1SccBase_samples_RigidBodyAcceleration_m_IsConstraintValid(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -1202,11 +1170,11 @@ flag asn1SccBase_samples_Wrench_m_Equal(const asn1SccBase_samples_Wrench_m* pVal
 
 void asn1SccBase_samples_Wrench_m_Initialize(asn1SccBase_samples_Wrench_m* pVal);
 
-#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA_ELM		7197  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA		7208  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA_ELM		7225  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA		7236  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_TIME_MICROSECONDS		7253  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA_ELM		7252  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA		7263  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA_ELM		7280  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA		7291  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_TIME_MICROSECONDS		7308  /**/
 flag asn1SccBase_samples_Wrench_m_IsConstraintValid(const asn1SccBase_samples_Wrench_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1235,13 +1203,13 @@ void asn1SccBase_samples_Pointcloud_m_points_Initialize(asn1SccBase_samples_Poin
 void asn1SccBase_samples_Pointcloud_m_colors_Initialize(asn1SccBase_samples_Pointcloud_m_colors* pVal);
 void asn1SccBase_samples_Pointcloud_m_Initialize(asn1SccBase_samples_Pointcloud_m* pVal);
 
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_TIME_MICROSECONDS		7571  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA_ELM		7592  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA		7603  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS		7620  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA_ELM		7627  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA		7638  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS		7655  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_TIME_MICROSECONDS		7626  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA_ELM		7647  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA		7658  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS		7675  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA_ELM		7682  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA		7693  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS		7710  /**/
 flag asn1SccBase_samples_Pointcloud_m_IsConstraintValid(const asn1SccBase_samples_Pointcloud_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -1254,7 +1222,7 @@ flag asn1SccT_String_Equal(const asn1SccT_String* pVal1, const asn1SccT_String* 
 
 void asn1SccT_String_Initialize(asn1SccT_String* pVal);
 
-#define ERR_T_STRING		8025  /**/
+#define ERR_T_STRING		8080  /**/
 flag asn1SccT_String_IsConstraintValid(const asn1SccT_String* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1338,13 +1306,13 @@ void asn1SccBase_JointTransformVector_names_Initialize(asn1SccBase_JointTransfor
 void asn1SccBase_JointTransformVector_elements_Initialize(asn1SccBase_JointTransformVector_elements* pVal);
 void asn1SccBase_JointTransformVector_Initialize(asn1SccBase_JointTransformVector* pVal);
 
-#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM		4757  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES		4768  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_SOURCEFRAME		4775  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_TARGETFRAME		4786  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4797  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA		4808  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4835  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM		4779  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES		4790  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_SOURCEFRAME		4797  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_TARGETFRAME		4808  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4819  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA		4830  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4857  /**/
 flag asn1SccBase_JointTransformVector_IsConstraintValid(const asn1SccBase_JointTransformVector* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1372,13 +1340,13 @@ void asn1SccBase_NamedVector_Base_JointTransform_names_Initialize(asn1SccBase_Na
 void asn1SccBase_NamedVector_Base_JointTransform_elements_Initialize(asn1SccBase_NamedVector_Base_JointTransform_elements* pVal);
 void asn1SccBase_NamedVector_Base_JointTransform_Initialize(asn1SccBase_NamedVector_Base_JointTransform* pVal);
 
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM		4848  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4859  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_SOURCEFRAME		4866  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_TARGETFRAME		4877  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4888  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA		4899  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4926  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM		4870  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4881  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_SOURCEFRAME		4888  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_TARGETFRAME		4899  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4910  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA		4921  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4948  /**/
 flag asn1SccBase_NamedVector_Base_JointTransform_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointTransform* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1660,14 +1628,14 @@ void asn1SccBase_samples_Wrenches_names_Initialize(asn1SccBase_samples_Wrenches_
 void asn1SccBase_samples_Wrenches_elements_Initialize(asn1SccBase_samples_Wrenches_elements* pVal);
 void asn1SccBase_samples_Wrenches_Initialize(asn1SccBase_samples_Wrenches* pVal);
 
-#define ERR_BASE_SAMPLES_WRENCHES_NAMES_ELM		4611  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_NAMES		4622  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA_ELM		4629  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA		4640  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA_ELM		4657  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA		4668  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS		4695  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_TIME_MICROSECONDS		4702  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_NAMES_ELM		4633  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_NAMES		4644  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA_ELM		4651  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA		4662  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA_ELM		4679  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA		4690  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS		4717  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_TIME_MICROSECONDS		4724  /**/
 flag asn1SccBase_samples_Wrenches_IsConstraintValid(const asn1SccBase_samples_Wrenches* pVal, int* pErrCode);
 
 typedef struct {
@@ -1679,8 +1647,8 @@ flag asn1SccBase_samples_frame_frame_attrib_t_Equal(const asn1SccBase_samples_fr
 
 void asn1SccBase_samples_frame_frame_attrib_t_Initialize(asn1SccBase_samples_frame_frame_attrib_t* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA		4729  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL		4740  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA		4751  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL		4762  /**/
 flag asn1SccBase_samples_frame_frame_attrib_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_attrib_t* pVal, int* pErrCode);
 
 typedef struct {
@@ -1693,10 +1661,10 @@ flag asn1SccBase_JointTransform_m_Equal(const asn1SccBase_JointTransform_m* pVal
 
 void asn1SccBase_JointTransform_m_Initialize(asn1SccBase_JointTransform_m* pVal);
 
-#define ERR_BASE_JOINTTRANSFORM_M_SOURCEFRAME		5860  /**/
-#define ERR_BASE_JOINTTRANSFORM_M_TARGETFRAME		5871  /**/
-#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA_ELM		5882  /**/
-#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA		5893  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_SOURCEFRAME		5915  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_TARGETFRAME		5926  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA_ELM		5937  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA		5948  /**/
 flag asn1SccBase_JointTransform_m_IsConstraintValid(const asn1SccBase_JointTransform_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1732,13 +1700,13 @@ flag asn1SccBase_JointTransformVector_m_Equal(const asn1SccBase_JointTransformVe
 void asn1SccBase_JointTransformVector_m_names_Initialize(asn1SccBase_JointTransformVector_m_names* pVal);
 void asn1SccBase_JointTransformVector_m_Initialize(asn1SccBase_JointTransformVector_m* pVal);
 
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM		7280  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7291  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_SOURCEFRAME		7298  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_TARGETFRAME		7309  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7320  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7331  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS		7358  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM		7335  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7346  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_SOURCEFRAME		7353  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_TARGETFRAME		7364  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7375  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7386  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS		7413  /**/
 flag asn1SccBase_JointTransformVector_m_IsConstraintValid(const asn1SccBase_JointTransformVector_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1758,13 +1726,13 @@ flag asn1SccBase_NamedVector_base_JointTransform_m_Equal(const asn1SccBase_Named
 void asn1SccBase_NamedVector_base_JointTransform_m_names_Initialize(asn1SccBase_NamedVector_base_JointTransform_m_names* pVal);
 void asn1SccBase_NamedVector_base_JointTransform_m_Initialize(asn1SccBase_NamedVector_base_JointTransform_m* pVal);
 
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM		7375  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7386  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_SOURCEFRAME		7393  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_TARGETFRAME		7404  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7415  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7426  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS		7453  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM		7430  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7441  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_SOURCEFRAME		7448  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_TARGETFRAME		7459  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7470  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7481  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS		7508  /**/
 flag asn1SccBase_NamedVector_base_JointTransform_m_IsConstraintValid(const asn1SccBase_NamedVector_base_JointTransform_m* pVal, int* pErrCode);
 
 typedef struct {
@@ -1785,26 +1753,26 @@ flag asn1SccBase_samples_RigidBodyState_m_Equal(const asn1SccBase_samples_RigidB
 
 void asn1SccBase_samples_RigidBodyState_m_Initialize(asn1SccBase_samples_RigidBodyState_m* pVal);
 
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_MICROSECONDS		6913  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME		6934  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME		6945  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA_ELM		6956  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA		6967  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA_ELM		6984  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA		6995  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM_ELM		7012  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM		7023  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_RE		7030  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA_ELM		7051  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA		7062  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA_ELM		7079  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA		7090  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA_ELM		7107  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA		7118  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA_ELM		7135  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA		7146  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA_ELM		7163  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA		7174  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_MICROSECONDS		6968  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME		6989  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME		7000  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA_ELM		7011  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA		7022  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA_ELM		7039  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA		7050  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM_ELM		7067  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM		7078  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_RE		7085  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA_ELM		7106  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA		7117  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA_ELM		7134  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA		7145  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA_ELM		7162  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA		7173  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA_ELM		7190  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA		7201  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA_ELM		7218  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA		7229  /**/
 flag asn1SccBase_samples_RigidBodyState_m_IsConstraintValid(const asn1SccBase_samples_RigidBodyState_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1824,13 +1792,13 @@ flag asn1SccBase_NamedVector_base_Wrench_m_Equal(const asn1SccBase_NamedVector_b
 void asn1SccBase_NamedVector_base_Wrench_m_names_Initialize(asn1SccBase_NamedVector_base_Wrench_m_names* pVal);
 void asn1SccBase_NamedVector_base_Wrench_m_Initialize(asn1SccBase_NamedVector_base_Wrench_m* pVal);
 
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM		7470  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7481  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA_ELM		7488  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA		7499  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7516  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA		7527  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS		7554  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM		7525  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7536  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA_ELM		7543  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA		7554  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7571  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA		7582  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS		7609  /**/
 flag asn1SccBase_NamedVector_base_Wrench_m_IsConstraintValid(const asn1SccBase_NamedVector_base_Wrench_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1851,15 +1819,33 @@ flag asn1SccBase_samples_Wrenches_m_Equal(const asn1SccBase_samples_Wrenches_m* 
 void asn1SccBase_samples_Wrenches_m_names_Initialize(asn1SccBase_samples_Wrenches_m_names* pVal);
 void asn1SccBase_samples_Wrenches_m_Initialize(asn1SccBase_samples_Wrenches_m* pVal);
 
-#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES_ELM		7668  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES		7679  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA_ELM		7686  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA		7697  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7714  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA		7725  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS		7752  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_TIME_MICROSECONDS		7763  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES_ELM		7723  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES		7734  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA_ELM		7741  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA		7752  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7769  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA		7780  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS		7807  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_TIME_MICROSECONDS		7818  /**/
 flag asn1SccBase_samples_Wrenches_m_IsConstraintValid(const asn1SccBase_samples_Wrenches_m* pVal, int* pErrCode);
+
+typedef char asn1SccVizkit3D_FilePath[256];
+
+flag asn1SccVizkit3D_FilePath_Equal(const asn1SccVizkit3D_FilePath val1, const asn1SccVizkit3D_FilePath val2);
+
+void asn1SccVizkit3D_FilePath_Initialize(asn1SccVizkit3D_FilePath val);
+
+#define ERR_VIZKIT3D_FILEPATH		8087  /**/
+flag asn1SccVizkit3D_FilePath_IsConstraintValid(const asn1SccVizkit3D_FilePath val, int* pErrCode);
+
+typedef char asn1SccVizkit3D_PluginLabel[32];
+
+flag asn1SccVizkit3D_PluginLabel_Equal(const asn1SccVizkit3D_PluginLabel val1, const asn1SccVizkit3D_PluginLabel val2);
+
+void asn1SccVizkit3D_PluginLabel_Initialize(asn1SccVizkit3D_PluginLabel val);
+
+#define ERR_VIZKIT3D_PLUGINLABEL		8094  /**/
+flag asn1SccVizkit3D_PluginLabel_IsConstraintValid(const asn1SccVizkit3D_PluginLabel val, int* pErrCode);
 typedef asn1SccSint asn1SccT_Int32;
 
 
@@ -1867,7 +1853,7 @@ flag asn1SccT_Int32_Equal(const asn1SccT_Int32* pVal1, const asn1SccT_Int32* pVa
 
 void asn1SccT_Int32_Initialize(asn1SccT_Int32* pVal);
 
-#define ERR_T_INT32		8060  /**/
+#define ERR_T_INT32		8101  /**/
 flag asn1SccT_Int32_IsConstraintValid(const asn1SccT_Int32* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1888,10 +1874,10 @@ flag asn1SccWrappers_MatrixXd_Equal(const asn1SccWrappers_MatrixXd* pVal1, const
 void asn1SccWrappers_MatrixXd_data_Initialize(asn1SccWrappers_MatrixXd_data* pVal);
 void asn1SccWrappers_MatrixXd_Initialize(asn1SccWrappers_MatrixXd* pVal);
 
-#define ERR_WRAPPERS_MATRIXXD_ROWS		5755  /**/
-#define ERR_WRAPPERS_MATRIXXD_COLS		5766  /**/
-#define ERR_WRAPPERS_MATRIXXD_DATA_ELM		5777  /**/
-#define ERR_WRAPPERS_MATRIXXD_DATA		5788  /**/
+#define ERR_WRAPPERS_MATRIXXD_ROWS		5810  /**/
+#define ERR_WRAPPERS_MATRIXXD_COLS		5821  /**/
+#define ERR_WRAPPERS_MATRIXXD_DATA_ELM		5832  /**/
+#define ERR_WRAPPERS_MATRIXXD_DATA		5843  /**/
 flag asn1SccWrappers_MatrixXd_IsConstraintValid(const asn1SccWrappers_MatrixXd* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -1923,14 +1909,14 @@ void asn1SccWrappers_geometry_Spline_knots_Initialize(asn1SccWrappers_geometry_S
 void asn1SccWrappers_geometry_Spline_vertices_Initialize(asn1SccWrappers_geometry_Spline_vertices* pVal);
 void asn1SccWrappers_geometry_Spline_Initialize(asn1SccWrappers_geometry_Spline* pVal);
 
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION		7790  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_DIMENSION		7801  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER		7812  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_KIND		7823  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM		7834  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7845  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM		7852  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7863  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION		7845  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_DIMENSION		7856  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER		7867  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_KIND		7878  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM		7889  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7900  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM		7907  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7918  /**/
 flag asn1SccWrappers_geometry_Spline_IsConstraintValid(const asn1SccWrappers_geometry_Spline* pVal, int* pErrCode);
 
 typedef struct {
@@ -1962,15 +1948,15 @@ flag asn1SccBase_Trajectory_m_Equal(const asn1SccBase_Trajectory_m* pVal1, const
 
 void asn1SccBase_Trajectory_m_Initialize(asn1SccBase_Trajectory_m* pVal);
 
-#define ERR_BASE_TRAJECTORY_M_SPEED		7876  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_GEOMETRIC_RESOLUTION		7887  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_DIMENSION		7898  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_CURVE_ORDER		7909  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_KIND		7920  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS_ELM		7931  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS		7942  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES_ELM		7949  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES		7960  /**/
+#define ERR_BASE_TRAJECTORY_M_SPEED		7931  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_GEOMETRIC_RESOLUTION		7942  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_DIMENSION		7953  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_CURVE_ORDER		7964  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_KIND		7975  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS_ELM		7986  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS		7997  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES_ELM		8004  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES		8015  /**/
 flag asn1SccBase_Trajectory_m_IsConstraintValid(const asn1SccBase_Trajectory_m* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -2000,7 +1986,7 @@ flag asn1SccT_UInt32_Equal(const asn1SccT_UInt32* pVal1, const asn1SccT_UInt32* 
 
 void asn1SccT_UInt32_Initialize(asn1SccT_UInt32* pVal);
 
-#define ERR_T_UINT32		8067  /**/
+#define ERR_T_UINT32		8108  /**/
 flag asn1SccT_UInt32_IsConstraintValid(const asn1SccT_UInt32* pVal, int* pErrCode);
 
 typedef struct {    int nCount; 
@@ -2175,11 +2161,78 @@ void asn1SccBase_samples_Sonar_Initialize(asn1SccBase_samples_Sonar* pVal);
 #define ERR_BASE_SAMPLES_SONAR_BINS_ELM		4276  /**/
 #define ERR_BASE_SAMPLES_SONAR_BINS		4287  /**/
 flag asn1SccBase_samples_Sonar_IsConstraintValid(const asn1SccBase_samples_Sonar* pVal, int* pErrCode);
+typedef asn1SccT_UInt32 asn1SccDummyBase_T;
+
+
+flag asn1SccDummyBase_T_Equal(const asn1SccDummyBase_T* pVal1, const asn1SccDummyBase_T* pVal2);
+
+void asn1SccDummyBase_T_Initialize(asn1SccDummyBase_T* pVal);
+
+#define ERR_DUMMYBASE_T		8136  /**/
+flag asn1SccDummyBase_T_IsConstraintValid(const asn1SccDummyBase_T* pVal, int* pErrCode);
+typedef asn1SccT_UInt32 asn1SccDummy2Base_T;
+
+
+flag asn1SccDummy2Base_T_Equal(const asn1SccDummy2Base_T* pVal1, const asn1SccDummy2Base_T* pVal2);
+
+void asn1SccDummy2Base_T_Initialize(asn1SccDummy2Base_T* pVal);
+
+#define ERR_DUMMY2BASE_T		29  /**/
+flag asn1SccDummy2Base_T_IsConstraintValid(const asn1SccDummy2Base_T* pVal, int* pErrCode);
+typedef asn1SccSint asn1SccT_Int8;
+
+
+flag asn1SccT_Int8_Equal(const asn1SccT_Int8* pVal1, const asn1SccT_Int8* pVal2);
+
+void asn1SccT_Int8_Initialize(asn1SccT_Int8* pVal);
+
+#define ERR_T_INT8		8115  /**/
+flag asn1SccT_Int8_IsConstraintValid(const asn1SccT_Int8* pVal, int* pErrCode);
+typedef asn1SccUint asn1SccT_UInt8;
+
+
+flag asn1SccT_UInt8_Equal(const asn1SccT_UInt8* pVal1, const asn1SccT_UInt8* pVal2);
+
+void asn1SccT_UInt8_Initialize(asn1SccT_UInt8* pVal);
+
+#define ERR_T_UINT8		8122  /**/
+flag asn1SccT_UInt8_IsConstraintValid(const asn1SccT_UInt8* pVal, int* pErrCode);
+
+typedef struct {    int nCount; 
+    
+    asn1SccT_UInt8 arr[200];
+} asn1SccBase_samples_SonarBeam_beam;
 
 typedef struct {
-    int nCount; 
+    asn1SccBase_Time time;
+    asn1SccBase_Angle bearing;
+    asn1SccT_Double sampling_interval;
+    asn1SccT_Float speed_of_sound;
+    asn1SccT_Float beamwidth_horizontal;
+    asn1SccT_Float beamwidth_vertical;
+    asn1SccBase_samples_SonarBeam_beam beam;
+} asn1SccBase_samples_SonarBeam;
+
+flag asn1SccBase_samples_SonarBeam_beam_Equal(const asn1SccBase_samples_SonarBeam_beam* pVal1, const asn1SccBase_samples_SonarBeam_beam* pVal2);
+
+flag asn1SccBase_samples_SonarBeam_Equal(const asn1SccBase_samples_SonarBeam* pVal1, const asn1SccBase_samples_SonarBeam* pVal2);
+
+void asn1SccBase_samples_SonarBeam_beam_Initialize(asn1SccBase_samples_SonarBeam_beam* pVal);
+void asn1SccBase_samples_SonarBeam_Initialize(asn1SccBase_samples_SonarBeam* pVal);
+
+#define ERR_BASE_SAMPLES_SONARBEAM_TIME_MICROSECONDS		4300  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEARING_RAD		4321  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL		4342  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND		4353  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL		4364  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL		4375  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAM_ELM		4386  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAM		4397  /**/
+flag asn1SccBase_samples_SonarBeam_IsConstraintValid(const asn1SccBase_samples_SonarBeam* pVal, int* pErrCode);
+
+typedef struct {    int nCount; 
     
-    byte arr[200];
+    asn1SccT_UInt8 arr[200];
 } asn1SccBase_samples_frame_Frame_image;
 
 typedef struct {    int nCount; 
@@ -2210,19 +2263,20 @@ void asn1SccBase_samples_frame_Frame_image_Initialize(asn1SccBase_samples_frame_
 void asn1SccBase_samples_frame_Frame_attributes_Initialize(asn1SccBase_samples_frame_Frame_attributes* pVal);
 void asn1SccBase_samples_frame_Frame_Initialize(asn1SccBase_samples_frame_Frame* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAME_TIME_MICROSECONDS		4939  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_MICROSECONDS		4960  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE		4981  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_DATA		4988  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_NAME_VAL		4999  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		5020  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_WIDTH		5027  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_HEIGHT		5038  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH		5059  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE		5070  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE		5081  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE		5092  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS		5103  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_TIME_MICROSECONDS		4961  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_MICROSECONDS		4982  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE_ELM		5003  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE		5014  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_DATA		5021  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_NAME_VAL		5032  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		5053  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_WIDTH		5060  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_HEIGHT		5071  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH		5092  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE		5103  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE		5114  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE		5125  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS		5136  /**/
 flag asn1SccBase_samples_frame_Frame_IsConstraintValid(const asn1SccBase_samples_frame_Frame* pVal, int* pErrCode);
 
 typedef struct {
@@ -2236,84 +2290,37 @@ flag asn1SccBase_samples_frame_FramePair_Equal(const asn1SccBase_samples_frame_F
 
 void asn1SccBase_samples_frame_FramePair_Initialize(asn1SccBase_samples_frame_FramePair* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_MICROSECONDS		5120  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_TIME_MICROSECONDS		5141  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_RECEIVED_TIME_MICROSECONDS		5162  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE		5183  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_DATA		5190  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_NAME_VAL		5201  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES		5222  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_WIDTH		5229  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_HEIGHT		5240  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_DATA_DEPTH		5261  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_PIXEL_SIZE		5272  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ROW_SIZE		5283  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_MODE		5294  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_STATUS		5305  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_TIME_MICROSECONDS		5326  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_RECEIVED_TIME_MICROSECONDS		5347  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE		5368  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_DATA		5375  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_NAME_VAL		5386  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES		5407  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_WIDTH		5414  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_HEIGHT		5425  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_DATA_DEPTH		5446  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_PIXEL_SIZE		5457  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ROW_SIZE		5468  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_MODE		5479  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_STATUS		5490  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID		5511  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_MICROSECONDS		5153  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_TIME_MICROSECONDS		5174  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_RECEIVED_TIME_MICROSECONDS		5195  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE_ELM		5216  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE		5227  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_DATA		5234  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_NAME_VAL		5245  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES		5266  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_WIDTH		5273  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_HEIGHT		5284  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_DATA_DEPTH		5305  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_PIXEL_SIZE		5316  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ROW_SIZE		5327  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_MODE		5338  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_STATUS		5349  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_TIME_MICROSECONDS		5370  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_RECEIVED_TIME_MICROSECONDS		5391  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE_ELM		5412  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE		5423  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_DATA		5430  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_NAME_VAL		5441  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES		5462  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_WIDTH		5469  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_HEIGHT		5480  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_DATA_DEPTH		5501  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_PIXEL_SIZE		5512  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ROW_SIZE		5523  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_MODE		5534  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_STATUS		5545  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID		5566  /**/
 flag asn1SccBase_samples_frame_FramePair_IsConstraintValid(const asn1SccBase_samples_frame_FramePair* pVal, int* pErrCode);
-
-typedef struct {
-    asn1SccT_UInt32 sec;
-    asn1SccT_UInt32 nsec;
-} asn1SccT_Time;
-
-flag asn1SccT_Time_Equal(const asn1SccT_Time* pVal1, const asn1SccT_Time* pVal2);
-
-void asn1SccT_Time_Initialize(asn1SccT_Time* pVal);
-
-#define ERR_T_TIME_SEC		8032  /**/
-#define ERR_T_TIME_NSEC		8043  /**/
-flag asn1SccT_Time_IsConstraintValid(const asn1SccT_Time* pVal, int* pErrCode);
-typedef asn1SccT_UInt32 asn1SccDummyBase_T;
-
-
-flag asn1SccDummyBase_T_Equal(const asn1SccDummyBase_T* pVal1, const asn1SccDummyBase_T* pVal2);
-
-void asn1SccDummyBase_T_Initialize(asn1SccDummyBase_T* pVal);
-
-#define ERR_DUMMYBASE_T		8109  /**/
-flag asn1SccDummyBase_T_IsConstraintValid(const asn1SccDummyBase_T* pVal, int* pErrCode);
-typedef asn1SccT_UInt32 asn1SccDummy2Base_T;
-
-
-flag asn1SccDummy2Base_T_Equal(const asn1SccDummy2Base_T* pVal1, const asn1SccDummy2Base_T* pVal2);
-
-void asn1SccDummy2Base_T_Initialize(asn1SccDummy2Base_T* pVal);
-
-#define ERR_DUMMY2BASE_T		29  /**/
-flag asn1SccDummy2Base_T_IsConstraintValid(const asn1SccDummy2Base_T* pVal, int* pErrCode);
-typedef asn1SccSint asn1SccT_Int8;
-
-
-flag asn1SccT_Int8_Equal(const asn1SccT_Int8* pVal1, const asn1SccT_Int8* pVal2);
-
-void asn1SccT_Int8_Initialize(asn1SccT_Int8* pVal);
-
-#define ERR_T_INT8		8074  /**/
-flag asn1SccT_Int8_IsConstraintValid(const asn1SccT_Int8* pVal, int* pErrCode);
-typedef asn1SccUint asn1SccT_UInt8;
-
-
-flag asn1SccT_UInt8_Equal(const asn1SccT_UInt8* pVal1, const asn1SccT_UInt8* pVal2);
-
-void asn1SccT_UInt8_Initialize(asn1SccT_UInt8* pVal);
-
-#define ERR_T_UINT8		8081  /**/
-flag asn1SccT_UInt8_IsConstraintValid(const asn1SccT_UInt8* pVal, int* pErrCode);
 typedef flag asn1SccT_Boolean;
 
 
@@ -2321,13 +2328,12 @@ flag asn1SccT_Boolean_Equal(const asn1SccT_Boolean* pVal1, const asn1SccT_Boolea
 
 void asn1SccT_Boolean_Initialize(asn1SccT_Boolean* pVal);
 
-#define ERR_T_BOOLEAN		8088  /**/
+#define ERR_T_BOOLEAN		8129  /**/
 flag asn1SccT_Boolean_IsConstraintValid(const asn1SccT_Boolean* pVal, int* pErrCode);
 
-typedef struct {
-    int nCount; 
+typedef struct {    int nCount; 
     
-    byte arr[200];
+    asn1SccT_UInt8 arr[200];
 } asn1SccBase_samples_SonarScan_data;
 
 typedef struct {    int nCount; 
@@ -2361,39 +2367,22 @@ void asn1SccBase_samples_SonarScan_data_Initialize(asn1SccBase_samples_SonarScan
 void asn1SccBase_samples_SonarScan_time_beams_Initialize(asn1SccBase_samples_SonarScan_time_beams* pVal);
 void asn1SccBase_samples_SonarScan_Initialize(asn1SccBase_samples_SonarScan* pVal);
 
-#define ERR_BASE_SAMPLES_SONARSCAN_TIME_MICROSECONDS		4399  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_DATA		4420  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_MICROSECONDS		4427  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4448  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS		4455  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS		4466  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_START_BEARING_RAD		4477  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_RAD		4498  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL		4519  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND		4530  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_RAD		4541  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_RAD		4562  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN		4583  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES		4594  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_TIME_MICROSECONDS		4410  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_DATA_ELM		4431  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_DATA		4442  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_MICROSECONDS		4449  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4470  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS		4477  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS		4488  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_START_BEARING_RAD		4499  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_RAD		4520  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL		4541  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND		4552  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_RAD		4563  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_RAD		4584  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN		4605  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES		4616  /**/
 flag asn1SccBase_samples_SonarScan_IsConstraintValid(const asn1SccBase_samples_SonarScan* pVal, int* pErrCode);
-
-typedef char asn1SccVizkit3D_FilePath[256];
-
-flag asn1SccVizkit3D_FilePath_Equal(const asn1SccVizkit3D_FilePath val1, const asn1SccVizkit3D_FilePath val2);
-
-void asn1SccVizkit3D_FilePath_Initialize(asn1SccVizkit3D_FilePath val);
-
-#define ERR_VIZKIT3D_FILEPATH		8095  /**/
-flag asn1SccVizkit3D_FilePath_IsConstraintValid(const asn1SccVizkit3D_FilePath val, int* pErrCode);
-
-typedef char asn1SccVizkit3D_PluginLabel[32];
-
-flag asn1SccVizkit3D_PluginLabel_Equal(const asn1SccVizkit3D_PluginLabel val1, const asn1SccVizkit3D_PluginLabel val2);
-
-void asn1SccVizkit3D_PluginLabel_Initialize(asn1SccVizkit3D_PluginLabel val);
-
-#define ERR_VIZKIT3D_PLUGINLABEL		8102  /**/
-flag asn1SccVizkit3D_PluginLabel_IsConstraintValid(const asn1SccVizkit3D_PluginLabel val, int* pErrCode);
 
 extern const asn1SccT_UInt32 numT_String;
 extern const asn1SccT_UInt32 vizkit3d_PathMaxSize;

@@ -74,14 +74,14 @@ flag asn1SccBase_JointState_MODE_Equal(const asn1SccBase_JointState_MODE* pVal1,
 void asn1SccBase_JointState_MODE_Initialize(asn1SccBase_JointState_MODE* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_jointstate_mode_acceleration;
+	(*(pVal)) = asn1Sccacceleration;
 }
 
 flag asn1SccBase_JointState_MODE_IsConstraintValid(const asn1SccBase_JointState_MODE* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((((((((*(pVal)) == asn1Sccbase_jointstate_mode_acceleration)) || (((*(pVal)) == asn1Sccbase_jointstate_mode_effort)))) || (((*(pVal)) == asn1Sccbase_jointstate_mode_position)))) || (((*(pVal)) == asn1Sccbase_jointstate_mode_raw)))) || (((*(pVal)) == asn1Sccbase_jointstate_mode_speed)))) || (((*(pVal)) == asn1Sccbase_jointstate_mode_unset)));
+    ret = ((((((((((((*(pVal)) == asn1Sccacceleration)) || (((*(pVal)) == asn1Scceffort)))) || (((*(pVal)) == asn1Sccposition)))) || (((*(pVal)) == asn1Sccraw)))) || (((*(pVal)) == asn1Sccspeed)))) || (((*(pVal)) == asn1Sccunset)));
     *pErrCode = ret ? 0 :  ERR_BASE_JOINTSTATE_MODE;
 
 	return ret;
@@ -98,14 +98,14 @@ flag asn1SccBase_Time_Resolution_Equal(const asn1SccBase_Time_Resolution* pVal1,
 void asn1SccBase_Time_Resolution_Initialize(asn1SccBase_Time_Resolution* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_time_resolution_microseconds;
+	(*(pVal)) = asn1Sccmicroseconds;
 }
 
 flag asn1SccBase_Time_Resolution_IsConstraintValid(const asn1SccBase_Time_Resolution* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((*(pVal)) == asn1Sccbase_time_resolution_microseconds)) || (((*(pVal)) == asn1Sccbase_time_resolution_milliseconds)))) || (((*(pVal)) == asn1Sccbase_time_resolution_seconds)));
+    ret = ((((((*(pVal)) == asn1Sccmicroseconds)) || (((*(pVal)) == asn1Sccmilliseconds)))) || (((*(pVal)) == asn1Sccseconds)));
     *pErrCode = ret ? 0 :  ERR_BASE_TIME_RESOLUTION;
 
 	return ret;
@@ -122,14 +122,14 @@ flag asn1SccBase_geometry_SplineBase_CoordinateType_Equal(const asn1SccBase_geom
 void asn1SccBase_geometry_SplineBase_CoordinateType_Initialize(asn1SccBase_geometry_SplineBase_CoordinateType* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_next;
+	(*(pVal)) = asn1Sccderivative_to_next;
 }
 
 flag asn1SccBase_geometry_SplineBase_CoordinateType_IsConstraintValid(const asn1SccBase_geometry_SplineBase_CoordinateType* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((((((((((((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_next)) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_prior)))) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_knuckle_point)))) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_ordinary_point)))) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_second_derivative_to_next)))) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_second_derivative_to_prior)))) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_tangent_point_for_next)))) || (((*(pVal)) == asn1Sccbase_geometry_splinebase_coordinatetype_tangent_point_for_prior)));
+    ret = ((((((((((((((((*(pVal)) == asn1Sccderivative_to_next)) || (((*(pVal)) == asn1Sccderivative_to_prior)))) || (((*(pVal)) == asn1Sccknuckle_point)))) || (((*(pVal)) == asn1Sccordinary_point)))) || (((*(pVal)) == asn1Sccsecond_derivative_to_next)))) || (((*(pVal)) == asn1Sccsecond_derivative_to_prior)))) || (((*(pVal)) == asn1Scctangent_point_for_next)))) || (((*(pVal)) == asn1Scctangent_point_for_prior)));
     *pErrCode = ret ? 0 :  ERR_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE;
 
 	return ret;
@@ -146,14 +146,14 @@ flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Equal(const asn1SccBas
 void asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Initialize(asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_samples_depthmap_depth_measurement_state_measurement_error;
+	(*(pVal)) = asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_measurement_error;
 }
 
 flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_IsConstraintValid(const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((((*(pVal)) == asn1Sccbase_samples_depthmap_depth_measurement_state_measurement_error)) || (((*(pVal)) == asn1Sccbase_samples_depthmap_depth_measurement_state_too_far)))) || (((*(pVal)) == asn1Sccbase_samples_depthmap_depth_measurement_state_too_near)))) || (((*(pVal)) == asn1Sccbase_samples_depthmap_depth_measurement_state_valid_measurement)));
+    ret = ((((((((*(pVal)) == asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_measurement_error)) || (((*(pVal)) == asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_too_far)))) || (((*(pVal)) == asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_too_near)))) || (((*(pVal)) == asn1Sccvalid_measurement)));
     *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE;
 
 	return ret;
@@ -170,14 +170,14 @@ flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Equal(const asn1SccBase_sample
 void asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Initialize(asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_samples_depthmap_projection_type_planar;
+	(*(pVal)) = asn1Sccplanar;
 }
 
 flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_IsConstraintValid(const asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((*(pVal)) == asn1Sccbase_samples_depthmap_projection_type_planar)) || (((*(pVal)) == asn1Sccbase_samples_depthmap_projection_type_polar)));
+    ret = ((((*(pVal)) == asn1Sccplanar)) || (((*(pVal)) == asn1Sccpolar)));
     *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE;
 
 	return ret;
@@ -194,14 +194,14 @@ flag asn1SccBase_samples_DepthMap_UNIT_AXIS_Equal(const asn1SccBase_samples_Dept
 void asn1SccBase_samples_DepthMap_UNIT_AXIS_Initialize(asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_samples_depthmap_unit_axis_unit_x;
+	(*(pVal)) = asn1Sccunit_x;
 }
 
 flag asn1SccBase_samples_DepthMap_UNIT_AXIS_IsConstraintValid(const asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((*(pVal)) == asn1Sccbase_samples_depthmap_unit_axis_unit_x)) || (((*(pVal)) == asn1Sccbase_samples_depthmap_unit_axis_unit_y)))) || (((*(pVal)) == asn1Sccbase_samples_depthmap_unit_axis_unit_z)));
+    ret = ((((((*(pVal)) == asn1Sccunit_x)) || (((*(pVal)) == asn1Sccunit_y)))) || (((*(pVal)) == asn1Sccunit_z)));
     *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS;
 
 	return ret;
@@ -218,14 +218,14 @@ flag asn1SccBase_samples_LASER_RANGE_ERRORS_Equal(const asn1SccBase_samples_LASE
 void asn1SccBase_samples_LASER_RANGE_ERRORS_Initialize(asn1SccBase_samples_LASER_RANGE_ERRORS* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_samples_laser_range_errors_end_laser_range_errors;
+	(*(pVal)) = asn1Sccend_laser_range_errors;
 }
 
 flag asn1SccBase_samples_LASER_RANGE_ERRORS_IsConstraintValid(const asn1SccBase_samples_LASER_RANGE_ERRORS* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((((((((*(pVal)) == asn1Sccbase_samples_laser_range_errors_end_laser_range_errors)) || (((*(pVal)) == asn1Sccbase_samples_laser_range_errors_max_range_error)))) || (((*(pVal)) == asn1Sccbase_samples_laser_range_errors_measurement_error)))) || (((*(pVal)) == asn1Sccbase_samples_laser_range_errors_other_range_errors)))) || (((*(pVal)) == asn1Sccbase_samples_laser_range_errors_too_far)))) || (((*(pVal)) == asn1Sccbase_samples_laser_range_errors_too_near)));
+    ret = ((((((((((((*(pVal)) == asn1Sccend_laser_range_errors)) || (((*(pVal)) == asn1Sccmax_range_error)))) || (((*(pVal)) == asn1SccBase_samples_LASER_RANGE_ERRORS_measurement_error)))) || (((*(pVal)) == asn1Sccother_range_errors)))) || (((*(pVal)) == asn1SccBase_samples_LASER_RANGE_ERRORS_too_far)))) || (((*(pVal)) == asn1SccBase_samples_LASER_RANGE_ERRORS_too_near)));
     *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_LASER_RANGE_ERRORS;
 
 	return ret;
@@ -242,14 +242,14 @@ flag asn1SccBase_samples_frame_frame_mode_t_Equal(const asn1SccBase_samples_fram
 void asn1SccBase_samples_frame_frame_mode_t_Initialize(asn1SccBase_samples_frame_frame_mode_t* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_samples_frame_frame_mode_t_compressed_modes;
+	(*(pVal)) = asn1Scccompressed_modes;
 }
 
 flag asn1SccBase_samples_frame_frame_mode_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_mode_t* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((((((((((((((((((((((((((((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_compressed_modes)) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_bggr)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_gbrg)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_grbg)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_rggb)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_bgr)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_grayscale)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_jpeg)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_pjpg)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_png)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb32)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_undefined)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_mode_uyvy)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_mode_t_raw_modes)));
+    ret = ((((((((((((((((((((((((((((((((*(pVal)) == asn1Scccompressed_modes)) || (((*(pVal)) == asn1Sccmode_bayer)))) || (((*(pVal)) == asn1Sccmode_bayer_bggr)))) || (((*(pVal)) == asn1Sccmode_bayer_gbrg)))) || (((*(pVal)) == asn1Sccmode_bayer_grbg)))) || (((*(pVal)) == asn1Sccmode_bayer_rggb)))) || (((*(pVal)) == asn1Sccmode_bgr)))) || (((*(pVal)) == asn1Sccmode_grayscale)))) || (((*(pVal)) == asn1Sccmode_jpeg)))) || (((*(pVal)) == asn1Sccmode_pjpg)))) || (((*(pVal)) == asn1Sccmode_png)))) || (((*(pVal)) == asn1Sccmode_rgb)))) || (((*(pVal)) == asn1Sccmode_rgb32)))) || (((*(pVal)) == asn1Sccmode_undefined)))) || (((*(pVal)) == asn1Sccmode_uyvy)))) || (((*(pVal)) == asn1Sccraw_modes)));
     *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_MODE_T;
 
 	return ret;
@@ -266,14 +266,14 @@ flag asn1SccBase_samples_frame_frame_status_t_Equal(const asn1SccBase_samples_fr
 void asn1SccBase_samples_frame_frame_status_t_Initialize(asn1SccBase_samples_frame_frame_status_t* pVal)
 {
 
-	(*(pVal)) = asn1Sccbase_samples_frame_frame_status_t_status_empty;
+	(*(pVal)) = asn1Sccstatus_empty;
 }
 
 flag asn1SccBase_samples_frame_frame_status_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_status_t* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((*(pVal)) == asn1Sccbase_samples_frame_frame_status_t_status_empty)) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_status_t_status_invalid)))) || (((*(pVal)) == asn1Sccbase_samples_frame_frame_status_t_status_valid)));
+    ret = ((((((*(pVal)) == asn1Sccstatus_empty)) || (((*(pVal)) == asn1Sccstatus_invalid)))) || (((*(pVal)) == asn1Sccstatus_valid)));
     *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_STATUS_T;
 
 	return ret;
@@ -290,14 +290,14 @@ flag asn1SccWrappers_geometry_SplineType_Equal(const asn1SccWrappers_geometry_Sp
 void asn1SccWrappers_geometry_SplineType_Initialize(asn1SccWrappers_geometry_SplineType* pVal)
 {
 
-	(*(pVal)) = asn1Sccwrappers_geometry_splinetype_degenerate;
+	(*(pVal)) = asn1Sccdegenerate;
 }
 
 flag asn1SccWrappers_geometry_SplineType_IsConstraintValid(const asn1SccWrappers_geometry_SplineType* pVal, int* pErrCode)
 {
     flag ret = TRUE;
 	
-    ret = ((((((((((*(pVal)) == asn1Sccwrappers_geometry_splinetype_degenerate)) || (((*(pVal)) == asn1Sccwrappers_geometry_splinetype_polynomial_bezier)))) || (((*(pVal)) == asn1Sccwrappers_geometry_splinetype_polynomial_bspline)))) || (((*(pVal)) == asn1Sccwrappers_geometry_splinetype_rational_bezier)))) || (((*(pVal)) == asn1Sccwrappers_geometry_splinetype_rational_bspline)));
+    ret = ((((((((((*(pVal)) == asn1Sccdegenerate)) || (((*(pVal)) == asn1Sccpolynomial_bezier)))) || (((*(pVal)) == asn1Sccpolynomial_bspline)))) || (((*(pVal)) == asn1Sccrational_bezier)))) || (((*(pVal)) == asn1Sccrational_bspline)));
     *pErrCode = ret ? 0 :  ERR_WRAPPERS_GEOMETRY_SPLINETYPE;
 
 	return ret;
@@ -3437,108 +3437,6 @@ flag asn1SccBase_samples_Pointcloud_IsConstraintValid(const asn1SccBase_samples_
 
 
 
-flag asn1SccBase_samples_SonarBeam_beam_Equal(const asn1SccBase_samples_SonarBeam_beam* pVal1, const asn1SccBase_samples_SonarBeam_beam* pVal2)
-{
-	return (pVal1->nCount == pVal2->nCount) && (memcmp(pVal1->arr, pVal2->arr, pVal1->nCount) ==0)	;
-
-}
-
-flag asn1SccBase_samples_SonarBeam_Equal(const asn1SccBase_samples_SonarBeam* pVal1, const asn1SccBase_samples_SonarBeam* pVal2)
-{
-	flag ret=TRUE;
-
-    ret = asn1SccBase_Time_Equal((&(pVal1->time)), (&(pVal2->time)));
-
-    if (ret) {
-        ret = asn1SccBase_Angle_Equal((&(pVal1->bearing)), (&(pVal2->bearing)));
-
-        if (ret) {
-            ret = (pVal1->sampling_interval == pVal2->sampling_interval);
-
-            if (ret) {
-                ret = (pVal1->speed_of_sound == pVal2->speed_of_sound);
-
-                if (ret) {
-                    ret = (pVal1->beamwidth_horizontal == pVal2->beamwidth_horizontal);
-
-                    if (ret) {
-                        ret = (pVal1->beamwidth_vertical == pVal2->beamwidth_vertical);
-
-                        if (ret) {
-                            ret = asn1SccBase_samples_SonarBeam_beam_Equal((&(pVal1->beam)), (&(pVal2->beam)));
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-	return ret;
-
-}
-
-void asn1SccBase_samples_SonarBeam_beam_Initialize(asn1SccBase_samples_SonarBeam_beam* pVal)
-{
-
-	memset(pVal->arr, 0x0, 200);
-
-}
-void asn1SccBase_samples_SonarBeam_Initialize(asn1SccBase_samples_SonarBeam* pVal)
-{
-
-
-	/*set time */
-	asn1SccBase_Time_Initialize((&(pVal->time)));
-	/*set bearing */
-	asn1SccBase_Angle_Initialize((&(pVal->bearing)));
-	/*set sampling_interval */
-	asn1SccT_Double_Initialize((&(pVal->sampling_interval)));
-	/*set speed_of_sound */
-	asn1SccT_Float_Initialize((&(pVal->speed_of_sound)));
-	/*set beamwidth_horizontal */
-	asn1SccT_Float_Initialize((&(pVal->beamwidth_horizontal)));
-	/*set beamwidth_vertical */
-	asn1SccT_Float_Initialize((&(pVal->beamwidth_vertical)));
-	/*set beam */
-	asn1SccBase_samples_SonarBeam_beam_Initialize((&(pVal->beam)));
-}
-
-flag asn1SccBase_samples_SonarBeam_IsConstraintValid(const asn1SccBase_samples_SonarBeam *pVal, int* pErrCode)
-{
-    flag ret = TRUE;
-	
-    ret = (-9223372036854775807LL <= pVal->time.microseconds);
-    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_TIME_MICROSECONDS;
-    if (ret) {
-        ret = ((-1.79769313486231570000E+308 <= pVal->bearing.rad) && (pVal->bearing.rad <= 1.79769313486231570000E+308));
-        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEARING_RAD;
-        if (ret) {
-            ret = ((-1.79769313486231570000E+308 <= pVal->sampling_interval) && (pVal->sampling_interval <= 1.79769313486231570000E+308));
-            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL;
-            if (ret) {
-                ret = ((-3.40282346600000020000E+038 <= pVal->speed_of_sound) && (pVal->speed_of_sound <= 3.40282346600000020000E+038));
-                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND;
-                if (ret) {
-                    ret = ((-3.40282346600000020000E+038 <= pVal->beamwidth_horizontal) && (pVal->beamwidth_horizontal <= 3.40282346600000020000E+038));
-                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL;
-                    if (ret) {
-                        ret = ((-3.40282346600000020000E+038 <= pVal->beamwidth_vertical) && (pVal->beamwidth_vertical <= 3.40282346600000020000E+038));
-                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL;
-                        if (ret) {
-                            ret = ((1 <= pVal->beam.nCount) && (pVal->beam.nCount <= 200));
-                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAM;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-	return ret;
-}
-
-
-
 flag asn1SccBase_commands_LinearAngular6DCommand_m_Equal(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal1, const asn1SccBase_commands_LinearAngular6DCommand_m* pVal2)
 {
 	flag ret=TRUE;
@@ -6344,6 +6242,56 @@ flag asn1SccBase_samples_Wrenches_m_IsConstraintValid(const asn1SccBase_samples_
 
 
 
+flag asn1SccVizkit3D_FilePath_Equal(const asn1SccVizkit3D_FilePath val1, const asn1SccVizkit3D_FilePath val2)
+{
+	return strcmp(val1, val2) == 0;
+
+}
+
+void asn1SccVizkit3D_FilePath_Initialize(asn1SccVizkit3D_FilePath val)
+{
+
+	memset(val, 0x0, 256);
+
+}
+
+flag asn1SccVizkit3D_FilePath_IsConstraintValid(const asn1SccVizkit3D_FilePath val, int* pErrCode)
+{
+    flag ret = TRUE;
+	
+    ret = (strlen(val) <= 255);
+    *pErrCode = ret ? 0 :  ERR_VIZKIT3D_FILEPATH;
+
+	return ret;
+}
+
+
+
+flag asn1SccVizkit3D_PluginLabel_Equal(const asn1SccVizkit3D_PluginLabel val1, const asn1SccVizkit3D_PluginLabel val2)
+{
+	return strcmp(val1, val2) == 0;
+
+}
+
+void asn1SccVizkit3D_PluginLabel_Initialize(asn1SccVizkit3D_PluginLabel val)
+{
+
+	memset(val, 0x0, 32);
+
+}
+
+flag asn1SccVizkit3D_PluginLabel_IsConstraintValid(const asn1SccVizkit3D_PluginLabel val, int* pErrCode)
+{
+    flag ret = TRUE;
+	
+    ret = ((1 <= strlen(val)) && (strlen(val) <= 31));
+    *pErrCode = ret ? 0 :  ERR_VIZKIT3D_PLUGINLABEL;
+
+	return ret;
+}
+
+
+
 flag asn1SccT_Int32_Equal(const asn1SccT_Int32* pVal1, const asn1SccT_Int32* pVal2)
 {
 	return (*(pVal1)) == (*(pVal2));
@@ -6565,7 +6513,7 @@ flag asn1SccWrappers_geometry_Spline_IsConstraintValid(const asn1SccWrappers_geo
             ret = ((-2147483648LL <= pVal->curve_order) && (pVal->curve_order <= 2147483647LL));
             *pErrCode = ret ? 0 :  ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER;
             if (ret) {
-                ret = (((((((((pVal->kind == asn1Sccwrappers_geometry_splinetype_degenerate)) || ((pVal->kind == asn1Sccwrappers_geometry_splinetype_polynomial_bezier)))) || ((pVal->kind == asn1Sccwrappers_geometry_splinetype_polynomial_bspline)))) || ((pVal->kind == asn1Sccwrappers_geometry_splinetype_rational_bezier)))) || ((pVal->kind == asn1Sccwrappers_geometry_splinetype_rational_bspline)));
+                ret = (((((((((pVal->kind == asn1Sccdegenerate)) || ((pVal->kind == asn1Sccpolynomial_bezier)))) || ((pVal->kind == asn1Sccpolynomial_bspline)))) || ((pVal->kind == asn1Sccrational_bezier)))) || ((pVal->kind == asn1Sccrational_bspline)));
                 *pErrCode = ret ? 0 :  ERR_WRAPPERS_GEOMETRY_SPLINE_KIND;
                 if (ret) {
                     ret = ((1 <= pVal->knots.nCount) && (pVal->knots.nCount <= 200));
@@ -6637,7 +6585,7 @@ flag asn1SccBase_Trajectory_IsConstraintValid(const asn1SccBase_Trajectory *pVal
                 ret = ((-2147483648LL <= pVal->spline.curve_order) && (pVal->spline.curve_order <= 2147483647LL));
                 *pErrCode = ret ? 0 :  ERR_BASE_TRAJECTORY_SPLINE_CURVE_ORDER;
                 if (ret) {
-                    ret = (((((((((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_degenerate)) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_polynomial_bezier)))) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_polynomial_bspline)))) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_rational_bezier)))) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_rational_bspline)));
+                    ret = (((((((((pVal->spline.kind == asn1Sccdegenerate)) || ((pVal->spline.kind == asn1Sccpolynomial_bezier)))) || ((pVal->spline.kind == asn1Sccpolynomial_bspline)))) || ((pVal->spline.kind == asn1Sccrational_bezier)))) || ((pVal->spline.kind == asn1Sccrational_bspline)));
                     *pErrCode = ret ? 0 :  ERR_BASE_TRAJECTORY_SPLINE_KIND;
                     if (ret) {
                         ret = ((1 <= pVal->spline.knots.nCount) && (pVal->spline.knots.nCount <= 200));
@@ -6710,7 +6658,7 @@ flag asn1SccBase_Trajectory_m_IsConstraintValid(const asn1SccBase_Trajectory_m *
                 ret = ((-2147483648LL <= pVal->spline.curve_order) && (pVal->spline.curve_order <= 2147483647LL));
                 *pErrCode = ret ? 0 :  ERR_BASE_TRAJECTORY_M_SPLINE_CURVE_ORDER;
                 if (ret) {
-                    ret = (((((((((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_degenerate)) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_polynomial_bezier)))) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_polynomial_bspline)))) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_rational_bezier)))) || ((pVal->spline.kind == asn1Sccwrappers_geometry_splinetype_rational_bspline)));
+                    ret = (((((((((pVal->spline.kind == asn1Sccdegenerate)) || ((pVal->spline.kind == asn1Sccpolynomial_bezier)))) || ((pVal->spline.kind == asn1Sccpolynomial_bspline)))) || ((pVal->spline.kind == asn1Sccrational_bezier)))) || ((pVal->spline.kind == asn1Sccrational_bspline)));
                     *pErrCode = ret ? 0 :  ERR_BASE_TRAJECTORY_M_SPLINE_KIND;
                     if (ret) {
                         ret = ((1 <= pVal->spline.knots.nCount) && (pVal->spline.knots.nCount <= 200));
@@ -6791,7 +6739,7 @@ flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_IsConstraintVal
     	            ret = ((-2147483648LL <= pVal->arr[i1].spline.curve_order) && (pVal->arr[i1].spline.curve_order <= 2147483647LL));
     	            *pErrCode = ret ? 0 :  ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_CURVE_ORDER;
     	            if (ret) {
-    	                ret = (((((((((pVal->arr[i1].spline.kind == asn1Sccwrappers_geometry_splinetype_degenerate)) || ((pVal->arr[i1].spline.kind == asn1Sccwrappers_geometry_splinetype_polynomial_bezier)))) || ((pVal->arr[i1].spline.kind == asn1Sccwrappers_geometry_splinetype_polynomial_bspline)))) || ((pVal->arr[i1].spline.kind == asn1Sccwrappers_geometry_splinetype_rational_bezier)))) || ((pVal->arr[i1].spline.kind == asn1Sccwrappers_geometry_splinetype_rational_bspline)));
+    	                ret = (((((((((pVal->arr[i1].spline.kind == asn1Sccdegenerate)) || ((pVal->arr[i1].spline.kind == asn1Sccpolynomial_bezier)))) || ((pVal->arr[i1].spline.kind == asn1Sccpolynomial_bspline)))) || ((pVal->arr[i1].spline.kind == asn1Sccrational_bezier)))) || ((pVal->arr[i1].spline.kind == asn1Sccrational_bspline)));
     	                *pErrCode = ret ? 0 :  ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KIND;
     	                if (ret) {
     	                    ret = ((1 <= pVal->arr[i1].spline.knots.nCount) && (pVal->arr[i1].spline.knots.nCount <= 200));
@@ -7068,10 +7016,10 @@ flag asn1SccBase_samples_DepthMap_IsConstraintValid(const asn1SccBase_samples_De
         }
 
         if (ret) {
-            ret = (((pVal->vertical_projection == asn1Sccbase_samples_depthmap_projection_type_planar)) || ((pVal->vertical_projection == asn1Sccbase_samples_depthmap_projection_type_polar)));
+            ret = (((pVal->vertical_projection == asn1Sccplanar)) || ((pVal->vertical_projection == asn1Sccpolar)));
             *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION;
             if (ret) {
-                ret = (((pVal->horizontal_projection == asn1Sccbase_samples_depthmap_projection_type_planar)) || ((pVal->horizontal_projection == asn1Sccbase_samples_depthmap_projection_type_polar)));
+                ret = (((pVal->horizontal_projection == asn1Sccplanar)) || ((pVal->horizontal_projection == asn1Sccpolar)));
                 *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION;
                 if (ret) {
                     ret = ((1 <= pVal->vertical_interval.nCount) && (pVal->vertical_interval.nCount <= 200));
@@ -7512,380 +7460,6 @@ flag asn1SccBase_samples_Sonar_IsConstraintValid(const asn1SccBase_samples_Sonar
 
 
 
-flag asn1SccBase_samples_frame_Frame_image_Equal(const asn1SccBase_samples_frame_Frame_image* pVal1, const asn1SccBase_samples_frame_Frame_image* pVal2)
-{
-	return (pVal1->nCount == pVal2->nCount) && (memcmp(pVal1->arr, pVal2->arr, pVal1->nCount) ==0)	;
-
-}
-
-flag asn1SccBase_samples_frame_Frame_attributes_Equal(const asn1SccBase_samples_frame_Frame_attributes* pVal1, const asn1SccBase_samples_frame_Frame_attributes* pVal2)
-{
-	flag ret=TRUE;
-    int i1;
-
-    ret = (pVal1->nCount == pVal2->nCount);
-    for(i1 = 0; ret && i1 < pVal1->nCount; i1++) 
-    {
-    	ret = asn1SccBase_samples_frame_frame_attrib_t_Equal((&(pVal1->arr[i1])), (&(pVal2->arr[i1])));
-    }
-
-	return ret;
-
-}
-
-flag asn1SccBase_samples_frame_Frame_Equal(const asn1SccBase_samples_frame_Frame* pVal1, const asn1SccBase_samples_frame_Frame* pVal2)
-{
-	flag ret=TRUE;
-
-    ret = asn1SccBase_Time_Equal((&(pVal1->time)), (&(pVal2->time)));
-
-    if (ret) {
-        ret = asn1SccBase_Time_Equal((&(pVal1->received_time)), (&(pVal2->received_time)));
-
-        if (ret) {
-            ret = asn1SccBase_samples_frame_Frame_image_Equal((&(pVal1->image)), (&(pVal2->image)));
-
-            if (ret) {
-                ret = asn1SccBase_samples_frame_Frame_attributes_Equal((&(pVal1->attributes)), (&(pVal2->attributes)));
-
-                if (ret) {
-                    ret = asn1SccBase_samples_frame_frame_size_t_Equal((&(pVal1->size_val)), (&(pVal2->size_val)));
-
-                    if (ret) {
-                        ret = (pVal1->data_depth == pVal2->data_depth);
-
-                        if (ret) {
-                            ret = (pVal1->pixel_size == pVal2->pixel_size);
-
-                            if (ret) {
-                                ret = (pVal1->row_size == pVal2->row_size);
-
-                                if (ret) {
-                                    ret = (pVal1->frame_mode == pVal2->frame_mode);
-
-                                    if (ret) {
-                                        ret = (pVal1->frame_status == pVal2->frame_status);
-
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-	return ret;
-
-}
-
-void asn1SccBase_samples_frame_Frame_image_Initialize(asn1SccBase_samples_frame_Frame_image* pVal)
-{
-
-	memset(pVal->arr, 0x0, 200);
-
-}
-void asn1SccBase_samples_frame_Frame_attributes_Initialize(asn1SccBase_samples_frame_Frame_attributes* pVal)
-{
-    int i1;
-
-	i1 = 0;
-	while (i1< 200) {
-	    asn1SccBase_samples_frame_frame_attrib_t_Initialize((&(pVal->arr[i1])));
-	    i1 = i1 + 1;
-	}
-	pVal->nCount = 1;
-}
-void asn1SccBase_samples_frame_Frame_Initialize(asn1SccBase_samples_frame_Frame* pVal)
-{
-
-
-	/*set time */
-	asn1SccBase_Time_Initialize((&(pVal->time)));
-	/*set received_time */
-	asn1SccBase_Time_Initialize((&(pVal->received_time)));
-	/*set image */
-	asn1SccBase_samples_frame_Frame_image_Initialize((&(pVal->image)));
-	/*set attributes */
-	asn1SccBase_samples_frame_Frame_attributes_Initialize((&(pVal->attributes)));
-	/*set size_val */
-	asn1SccBase_samples_frame_frame_size_t_Initialize((&(pVal->size_val)));
-	/*set data_depth */
-	asn1SccT_UInt32_Initialize((&(pVal->data_depth)));
-	/*set pixel_size */
-	asn1SccT_UInt32_Initialize((&(pVal->pixel_size)));
-	/*set row_size */
-	asn1SccT_UInt32_Initialize((&(pVal->row_size)));
-	/*set frame_mode */
-	asn1SccBase_samples_frame_frame_mode_t_Initialize((&(pVal->frame_mode)));
-	/*set frame_status */
-	asn1SccBase_samples_frame_frame_status_t_Initialize((&(pVal->frame_status)));
-}
-
-flag asn1SccBase_samples_frame_Frame_IsConstraintValid(const asn1SccBase_samples_frame_Frame *pVal, int* pErrCode)
-{
-    flag ret = TRUE;
-    int i1;
-	
-    ret = (-9223372036854775807LL <= pVal->time.microseconds);
-    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_TIME_MICROSECONDS;
-    if (ret) {
-        ret = (-9223372036854775807LL <= pVal->received_time.microseconds);
-        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_MICROSECONDS;
-        if (ret) {
-            ret = ((1 <= pVal->image.nCount) && (pVal->image.nCount <= 200));
-            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE;
-            if (ret) {
-                ret = ((1 <= pVal->attributes.nCount) && (pVal->attributes.nCount <= 200));
-                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES;
-                for(i1 = 0; ret && i1 < pVal->attributes.nCount; i1++) 
-                {
-                	ret = ((0 <= pVal->attributes.arr[i1].data.nCount) && (pVal->attributes.arr[i1].data.nCount <= 200));
-                	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_DATA;
-                	if (ret) {
-                	    ret = ((0 <= pVal->attributes.arr[i1].name_val.nCount) && (pVal->attributes.arr[i1].name_val.nCount <= 200));
-                	    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_NAME_VAL;
-                	}
-                }
-
-                if (ret) {
-                    ret = (pVal->size_val.width <= 65535UL);
-                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_WIDTH;
-                    if (ret) {
-                        ret = (pVal->size_val.height <= 65535UL);
-                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_HEIGHT;
-                    }
-                    if (ret) {
-                        ret = (pVal->data_depth <= 4294967295UL);
-                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH;
-                        if (ret) {
-                            ret = (pVal->pixel_size <= 4294967295UL);
-                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE;
-                            if (ret) {
-                                ret = (pVal->row_size <= 4294967295UL);
-                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE;
-                                if (ret) {
-                                    ret = (((((((((((((((((((((((((((((((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_compressed_modes)) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_bggr)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_gbrg)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_grbg)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_rggb)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bgr)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_grayscale)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_jpeg)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_pjpg)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_png)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb32)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_undefined)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_uyvy)))) || ((pVal->frame_mode == asn1Sccbase_samples_frame_frame_mode_t_raw_modes)));
-                                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE;
-                                    if (ret) {
-                                        ret = (((((pVal->frame_status == asn1Sccbase_samples_frame_frame_status_t_status_empty)) || ((pVal->frame_status == asn1Sccbase_samples_frame_frame_status_t_status_invalid)))) || ((pVal->frame_status == asn1Sccbase_samples_frame_frame_status_t_status_valid)));
-                                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-	return ret;
-}
-
-
-
-flag asn1SccBase_samples_frame_FramePair_Equal(const asn1SccBase_samples_frame_FramePair* pVal1, const asn1SccBase_samples_frame_FramePair* pVal2)
-{
-	flag ret=TRUE;
-
-    ret = asn1SccBase_Time_Equal((&(pVal1->time)), (&(pVal2->time)));
-
-    if (ret) {
-        ret = asn1SccBase_samples_frame_Frame_Equal((&(pVal1->first)), (&(pVal2->first)));
-
-        if (ret) {
-            ret = asn1SccBase_samples_frame_Frame_Equal((&(pVal1->second)), (&(pVal2->second)));
-
-            if (ret) {
-                ret = (pVal1->id == pVal2->id);
-
-            }
-        }
-    }
-	return ret;
-
-}
-
-void asn1SccBase_samples_frame_FramePair_Initialize(asn1SccBase_samples_frame_FramePair* pVal)
-{
-
-
-	/*set time */
-	asn1SccBase_Time_Initialize((&(pVal->time)));
-	/*set first */
-	asn1SccBase_samples_frame_Frame_Initialize((&(pVal->first)));
-	/*set second */
-	asn1SccBase_samples_frame_Frame_Initialize((&(pVal->second)));
-	/*set id */
-	asn1SccT_UInt32_Initialize((&(pVal->id)));
-}
-
-flag asn1SccBase_samples_frame_FramePair_IsConstraintValid(const asn1SccBase_samples_frame_FramePair *pVal, int* pErrCode)
-{
-    flag ret = TRUE;
-    int i1;
-	
-    ret = (-9223372036854775807LL <= pVal->time.microseconds);
-    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_MICROSECONDS;
-    if (ret) {
-        ret = (-9223372036854775807LL <= pVal->first.time.microseconds);
-        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_TIME_MICROSECONDS;
-        if (ret) {
-            ret = (-9223372036854775807LL <= pVal->first.received_time.microseconds);
-            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_RECEIVED_TIME_MICROSECONDS;
-            if (ret) {
-                ret = ((1 <= pVal->first.image.nCount) && (pVal->first.image.nCount <= 200));
-                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE;
-                if (ret) {
-                    ret = ((1 <= pVal->first.attributes.nCount) && (pVal->first.attributes.nCount <= 200));
-                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES;
-                    for(i1 = 0; ret && i1 < pVal->first.attributes.nCount; i1++) 
-                    {
-                    	ret = ((0 <= pVal->first.attributes.arr[i1].data.nCount) && (pVal->first.attributes.arr[i1].data.nCount <= 200));
-                    	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_DATA;
-                    	if (ret) {
-                    	    ret = ((0 <= pVal->first.attributes.arr[i1].name_val.nCount) && (pVal->first.attributes.arr[i1].name_val.nCount <= 200));
-                    	    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_NAME_VAL;
-                    	}
-                    }
-
-                    if (ret) {
-                        ret = (pVal->first.size_val.width <= 65535UL);
-                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_WIDTH;
-                        if (ret) {
-                            ret = (pVal->first.size_val.height <= 65535UL);
-                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_HEIGHT;
-                        }
-                        if (ret) {
-                            ret = (pVal->first.data_depth <= 4294967295UL);
-                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_DATA_DEPTH;
-                            if (ret) {
-                                ret = (pVal->first.pixel_size <= 4294967295UL);
-                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_PIXEL_SIZE;
-                                if (ret) {
-                                    ret = (pVal->first.row_size <= 4294967295UL);
-                                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ROW_SIZE;
-                                    if (ret) {
-                                        ret = (((((((((((((((((((((((((((((((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_compressed_modes)) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_bggr)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_gbrg)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_grbg)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_rggb)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bgr)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_grayscale)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_jpeg)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_pjpg)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_png)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb32)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_undefined)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_uyvy)))) || ((pVal->first.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_raw_modes)));
-                                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_MODE;
-                                        if (ret) {
-                                            ret = (((((pVal->first.frame_status == asn1Sccbase_samples_frame_frame_status_t_status_empty)) || ((pVal->first.frame_status == asn1Sccbase_samples_frame_frame_status_t_status_invalid)))) || ((pVal->first.frame_status == asn1Sccbase_samples_frame_frame_status_t_status_valid)));
-                                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_STATUS;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (ret) {
-            ret = (-9223372036854775807LL <= pVal->second.time.microseconds);
-            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_TIME_MICROSECONDS;
-            if (ret) {
-                ret = (-9223372036854775807LL <= pVal->second.received_time.microseconds);
-                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_RECEIVED_TIME_MICROSECONDS;
-                if (ret) {
-                    ret = ((1 <= pVal->second.image.nCount) && (pVal->second.image.nCount <= 200));
-                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE;
-                    if (ret) {
-                        ret = ((1 <= pVal->second.attributes.nCount) && (pVal->second.attributes.nCount <= 200));
-                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES;
-                        for(i1 = 0; ret && i1 < pVal->second.attributes.nCount; i1++) 
-                        {
-                        	ret = ((0 <= pVal->second.attributes.arr[i1].data.nCount) && (pVal->second.attributes.arr[i1].data.nCount <= 200));
-                        	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_DATA;
-                        	if (ret) {
-                        	    ret = ((0 <= pVal->second.attributes.arr[i1].name_val.nCount) && (pVal->second.attributes.arr[i1].name_val.nCount <= 200));
-                        	    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_NAME_VAL;
-                        	}
-                        }
-
-                        if (ret) {
-                            ret = (pVal->second.size_val.width <= 65535UL);
-                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_WIDTH;
-                            if (ret) {
-                                ret = (pVal->second.size_val.height <= 65535UL);
-                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_HEIGHT;
-                            }
-                            if (ret) {
-                                ret = (pVal->second.data_depth <= 4294967295UL);
-                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_DATA_DEPTH;
-                                if (ret) {
-                                    ret = (pVal->second.pixel_size <= 4294967295UL);
-                                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_PIXEL_SIZE;
-                                    if (ret) {
-                                        ret = (pVal->second.row_size <= 4294967295UL);
-                                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ROW_SIZE;
-                                        if (ret) {
-                                            ret = (((((((((((((((((((((((((((((((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_compressed_modes)) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_bggr)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_gbrg)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_grbg)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bayer_rggb)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_bgr)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_grayscale)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_jpeg)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_pjpg)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_png)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_rgb32)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_undefined)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_mode_uyvy)))) || ((pVal->second.frame_mode == asn1Sccbase_samples_frame_frame_mode_t_raw_modes)));
-                                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_MODE;
-                                            if (ret) {
-                                                ret = (((((pVal->second.frame_status == asn1Sccbase_samples_frame_frame_status_t_status_empty)) || ((pVal->second.frame_status == asn1Sccbase_samples_frame_frame_status_t_status_invalid)))) || ((pVal->second.frame_status == asn1Sccbase_samples_frame_frame_status_t_status_valid)));
-                                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_STATUS;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            if (ret) {
-                ret = (pVal->id <= 4294967295UL);
-                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID;
-            }
-        }
-    }
-
-	return ret;
-}
-
-
-
-flag asn1SccT_Time_Equal(const asn1SccT_Time* pVal1, const asn1SccT_Time* pVal2)
-{
-	flag ret=TRUE;
-
-    ret = (pVal1->sec == pVal2->sec);
-
-    if (ret) {
-        ret = (pVal1->nsec == pVal2->nsec);
-
-    }
-	return ret;
-
-}
-
-void asn1SccT_Time_Initialize(asn1SccT_Time* pVal)
-{
-
-
-	/*set sec */
-	asn1SccT_UInt32_Initialize((&(pVal->sec)));
-	/*set nsec */
-	asn1SccT_UInt32_Initialize((&(pVal->nsec)));
-}
-
-flag asn1SccT_Time_IsConstraintValid(const asn1SccT_Time *pVal, int* pErrCode)
-{
-    flag ret = TRUE;
-	
-    ret = (pVal->sec <= 4294967295UL);
-    *pErrCode = ret ? 0 :  ERR_T_TIME_SEC;
-    if (ret) {
-        ret = (pVal->nsec <= 4294967295UL);
-        *pErrCode = ret ? 0 :  ERR_T_TIME_NSEC;
-    }
-
-	return ret;
-}
-
-
-
 flag asn1SccDummyBase_T_Equal(const asn1SccDummyBase_T* pVal1, const asn1SccDummyBase_T* pVal2)
 {
 	return (*(pVal1)) == (*(pVal2));
@@ -7982,6 +7556,495 @@ flag asn1SccT_UInt8_IsConstraintValid(const asn1SccT_UInt8* pVal, int* pErrCode)
 
 
 
+flag asn1SccBase_samples_SonarBeam_beam_Equal(const asn1SccBase_samples_SonarBeam_beam* pVal1, const asn1SccBase_samples_SonarBeam_beam* pVal2)
+{
+	flag ret=TRUE;
+    int i1;
+
+    ret = (pVal1->nCount == pVal2->nCount);
+    for(i1 = 0; ret && i1 < pVal1->nCount; i1++) 
+    {
+    	ret = (pVal1->arr[i1] == pVal2->arr[i1]);
+    }
+
+	return ret;
+
+}
+
+flag asn1SccBase_samples_SonarBeam_Equal(const asn1SccBase_samples_SonarBeam* pVal1, const asn1SccBase_samples_SonarBeam* pVal2)
+{
+	flag ret=TRUE;
+
+    ret = asn1SccBase_Time_Equal((&(pVal1->time)), (&(pVal2->time)));
+
+    if (ret) {
+        ret = asn1SccBase_Angle_Equal((&(pVal1->bearing)), (&(pVal2->bearing)));
+
+        if (ret) {
+            ret = (pVal1->sampling_interval == pVal2->sampling_interval);
+
+            if (ret) {
+                ret = (pVal1->speed_of_sound == pVal2->speed_of_sound);
+
+                if (ret) {
+                    ret = (pVal1->beamwidth_horizontal == pVal2->beamwidth_horizontal);
+
+                    if (ret) {
+                        ret = (pVal1->beamwidth_vertical == pVal2->beamwidth_vertical);
+
+                        if (ret) {
+                            ret = asn1SccBase_samples_SonarBeam_beam_Equal((&(pVal1->beam)), (&(pVal2->beam)));
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+	return ret;
+
+}
+
+void asn1SccBase_samples_SonarBeam_beam_Initialize(asn1SccBase_samples_SonarBeam_beam* pVal)
+{
+    int i1;
+
+	i1 = 0;
+	while (i1< 200) {
+	    asn1SccT_UInt8_Initialize((&(pVal->arr[i1])));
+	    i1 = i1 + 1;
+	}
+	pVal->nCount = 1;
+}
+void asn1SccBase_samples_SonarBeam_Initialize(asn1SccBase_samples_SonarBeam* pVal)
+{
+
+
+	/*set time */
+	asn1SccBase_Time_Initialize((&(pVal->time)));
+	/*set bearing */
+	asn1SccBase_Angle_Initialize((&(pVal->bearing)));
+	/*set sampling_interval */
+	asn1SccT_Double_Initialize((&(pVal->sampling_interval)));
+	/*set speed_of_sound */
+	asn1SccT_Float_Initialize((&(pVal->speed_of_sound)));
+	/*set beamwidth_horizontal */
+	asn1SccT_Float_Initialize((&(pVal->beamwidth_horizontal)));
+	/*set beamwidth_vertical */
+	asn1SccT_Float_Initialize((&(pVal->beamwidth_vertical)));
+	/*set beam */
+	asn1SccBase_samples_SonarBeam_beam_Initialize((&(pVal->beam)));
+}
+
+flag asn1SccBase_samples_SonarBeam_IsConstraintValid(const asn1SccBase_samples_SonarBeam *pVal, int* pErrCode)
+{
+    flag ret = TRUE;
+    int i1;
+	
+    ret = (-9223372036854775807LL <= pVal->time.microseconds);
+    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_TIME_MICROSECONDS;
+    if (ret) {
+        ret = ((-1.79769313486231570000E+308 <= pVal->bearing.rad) && (pVal->bearing.rad <= 1.79769313486231570000E+308));
+        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEARING_RAD;
+        if (ret) {
+            ret = ((-1.79769313486231570000E+308 <= pVal->sampling_interval) && (pVal->sampling_interval <= 1.79769313486231570000E+308));
+            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL;
+            if (ret) {
+                ret = ((-3.40282346600000020000E+038 <= pVal->speed_of_sound) && (pVal->speed_of_sound <= 3.40282346600000020000E+038));
+                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND;
+                if (ret) {
+                    ret = ((-3.40282346600000020000E+038 <= pVal->beamwidth_horizontal) && (pVal->beamwidth_horizontal <= 3.40282346600000020000E+038));
+                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL;
+                    if (ret) {
+                        ret = ((-3.40282346600000020000E+038 <= pVal->beamwidth_vertical) && (pVal->beamwidth_vertical <= 3.40282346600000020000E+038));
+                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL;
+                        if (ret) {
+                            ret = ((1 <= pVal->beam.nCount) && (pVal->beam.nCount <= 200));
+                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAM;
+                            for(i1 = 0; ret && i1 < pVal->beam.nCount; i1++) 
+                            {
+                            	ret = (pVal->beam.arr[i1] <= 255UL);
+                            	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARBEAM_BEAM_ELM;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+	return ret;
+}
+
+
+
+flag asn1SccBase_samples_frame_Frame_image_Equal(const asn1SccBase_samples_frame_Frame_image* pVal1, const asn1SccBase_samples_frame_Frame_image* pVal2)
+{
+	flag ret=TRUE;
+    int i1;
+
+    ret = (pVal1->nCount == pVal2->nCount);
+    for(i1 = 0; ret && i1 < pVal1->nCount; i1++) 
+    {
+    	ret = (pVal1->arr[i1] == pVal2->arr[i1]);
+    }
+
+	return ret;
+
+}
+
+flag asn1SccBase_samples_frame_Frame_attributes_Equal(const asn1SccBase_samples_frame_Frame_attributes* pVal1, const asn1SccBase_samples_frame_Frame_attributes* pVal2)
+{
+	flag ret=TRUE;
+    int i1;
+
+    ret = (pVal1->nCount == pVal2->nCount);
+    for(i1 = 0; ret && i1 < pVal1->nCount; i1++) 
+    {
+    	ret = asn1SccBase_samples_frame_frame_attrib_t_Equal((&(pVal1->arr[i1])), (&(pVal2->arr[i1])));
+    }
+
+	return ret;
+
+}
+
+flag asn1SccBase_samples_frame_Frame_Equal(const asn1SccBase_samples_frame_Frame* pVal1, const asn1SccBase_samples_frame_Frame* pVal2)
+{
+	flag ret=TRUE;
+
+    ret = asn1SccBase_Time_Equal((&(pVal1->time)), (&(pVal2->time)));
+
+    if (ret) {
+        ret = asn1SccBase_Time_Equal((&(pVal1->received_time)), (&(pVal2->received_time)));
+
+        if (ret) {
+            ret = asn1SccBase_samples_frame_Frame_image_Equal((&(pVal1->image)), (&(pVal2->image)));
+
+            if (ret) {
+                ret = asn1SccBase_samples_frame_Frame_attributes_Equal((&(pVal1->attributes)), (&(pVal2->attributes)));
+
+                if (ret) {
+                    ret = asn1SccBase_samples_frame_frame_size_t_Equal((&(pVal1->size_val)), (&(pVal2->size_val)));
+
+                    if (ret) {
+                        ret = (pVal1->data_depth == pVal2->data_depth);
+
+                        if (ret) {
+                            ret = (pVal1->pixel_size == pVal2->pixel_size);
+
+                            if (ret) {
+                                ret = (pVal1->row_size == pVal2->row_size);
+
+                                if (ret) {
+                                    ret = (pVal1->frame_mode == pVal2->frame_mode);
+
+                                    if (ret) {
+                                        ret = (pVal1->frame_status == pVal2->frame_status);
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+	return ret;
+
+}
+
+void asn1SccBase_samples_frame_Frame_image_Initialize(asn1SccBase_samples_frame_Frame_image* pVal)
+{
+    int i1;
+
+	i1 = 0;
+	while (i1< 200) {
+	    asn1SccT_UInt8_Initialize((&(pVal->arr[i1])));
+	    i1 = i1 + 1;
+	}
+	pVal->nCount = 1;
+}
+void asn1SccBase_samples_frame_Frame_attributes_Initialize(asn1SccBase_samples_frame_Frame_attributes* pVal)
+{
+    int i1;
+
+	i1 = 0;
+	while (i1< 200) {
+	    asn1SccBase_samples_frame_frame_attrib_t_Initialize((&(pVal->arr[i1])));
+	    i1 = i1 + 1;
+	}
+	pVal->nCount = 1;
+}
+void asn1SccBase_samples_frame_Frame_Initialize(asn1SccBase_samples_frame_Frame* pVal)
+{
+
+
+	/*set time */
+	asn1SccBase_Time_Initialize((&(pVal->time)));
+	/*set received_time */
+	asn1SccBase_Time_Initialize((&(pVal->received_time)));
+	/*set image */
+	asn1SccBase_samples_frame_Frame_image_Initialize((&(pVal->image)));
+	/*set attributes */
+	asn1SccBase_samples_frame_Frame_attributes_Initialize((&(pVal->attributes)));
+	/*set size_val */
+	asn1SccBase_samples_frame_frame_size_t_Initialize((&(pVal->size_val)));
+	/*set data_depth */
+	asn1SccT_UInt32_Initialize((&(pVal->data_depth)));
+	/*set pixel_size */
+	asn1SccT_UInt32_Initialize((&(pVal->pixel_size)));
+	/*set row_size */
+	asn1SccT_UInt32_Initialize((&(pVal->row_size)));
+	/*set frame_mode */
+	asn1SccBase_samples_frame_frame_mode_t_Initialize((&(pVal->frame_mode)));
+	/*set frame_status */
+	asn1SccBase_samples_frame_frame_status_t_Initialize((&(pVal->frame_status)));
+}
+
+flag asn1SccBase_samples_frame_Frame_IsConstraintValid(const asn1SccBase_samples_frame_Frame *pVal, int* pErrCode)
+{
+    flag ret = TRUE;
+    int i1;
+	
+    ret = (-9223372036854775807LL <= pVal->time.microseconds);
+    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_TIME_MICROSECONDS;
+    if (ret) {
+        ret = (-9223372036854775807LL <= pVal->received_time.microseconds);
+        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_MICROSECONDS;
+        if (ret) {
+            ret = ((1 <= pVal->image.nCount) && (pVal->image.nCount <= 200));
+            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE;
+            for(i1 = 0; ret && i1 < pVal->image.nCount; i1++) 
+            {
+            	ret = (pVal->image.arr[i1] <= 255UL);
+            	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE_ELM;
+            }
+
+            if (ret) {
+                ret = ((1 <= pVal->attributes.nCount) && (pVal->attributes.nCount <= 200));
+                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES;
+                for(i1 = 0; ret && i1 < pVal->attributes.nCount; i1++) 
+                {
+                	ret = ((0 <= pVal->attributes.arr[i1].data.nCount) && (pVal->attributes.arr[i1].data.nCount <= 200));
+                	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_DATA;
+                	if (ret) {
+                	    ret = ((0 <= pVal->attributes.arr[i1].name_val.nCount) && (pVal->attributes.arr[i1].name_val.nCount <= 200));
+                	    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_NAME_VAL;
+                	}
+                }
+
+                if (ret) {
+                    ret = (pVal->size_val.width <= 65535UL);
+                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_WIDTH;
+                    if (ret) {
+                        ret = (pVal->size_val.height <= 65535UL);
+                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_HEIGHT;
+                    }
+                    if (ret) {
+                        ret = (pVal->data_depth <= 4294967295UL);
+                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH;
+                        if (ret) {
+                            ret = (pVal->pixel_size <= 4294967295UL);
+                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE;
+                            if (ret) {
+                                ret = (pVal->row_size <= 4294967295UL);
+                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE;
+                                if (ret) {
+                                    ret = (((((((((((((((((((((((((((((((pVal->frame_mode == asn1Scccompressed_modes)) || ((pVal->frame_mode == asn1Sccmode_bayer)))) || ((pVal->frame_mode == asn1Sccmode_bayer_bggr)))) || ((pVal->frame_mode == asn1Sccmode_bayer_gbrg)))) || ((pVal->frame_mode == asn1Sccmode_bayer_grbg)))) || ((pVal->frame_mode == asn1Sccmode_bayer_rggb)))) || ((pVal->frame_mode == asn1Sccmode_bgr)))) || ((pVal->frame_mode == asn1Sccmode_grayscale)))) || ((pVal->frame_mode == asn1Sccmode_jpeg)))) || ((pVal->frame_mode == asn1Sccmode_pjpg)))) || ((pVal->frame_mode == asn1Sccmode_png)))) || ((pVal->frame_mode == asn1Sccmode_rgb)))) || ((pVal->frame_mode == asn1Sccmode_rgb32)))) || ((pVal->frame_mode == asn1Sccmode_undefined)))) || ((pVal->frame_mode == asn1Sccmode_uyvy)))) || ((pVal->frame_mode == asn1Sccraw_modes)));
+                                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE;
+                                    if (ret) {
+                                        ret = (((((pVal->frame_status == asn1Sccstatus_empty)) || ((pVal->frame_status == asn1Sccstatus_invalid)))) || ((pVal->frame_status == asn1Sccstatus_valid)));
+                                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+	return ret;
+}
+
+
+
+flag asn1SccBase_samples_frame_FramePair_Equal(const asn1SccBase_samples_frame_FramePair* pVal1, const asn1SccBase_samples_frame_FramePair* pVal2)
+{
+	flag ret=TRUE;
+
+    ret = asn1SccBase_Time_Equal((&(pVal1->time)), (&(pVal2->time)));
+
+    if (ret) {
+        ret = asn1SccBase_samples_frame_Frame_Equal((&(pVal1->first)), (&(pVal2->first)));
+
+        if (ret) {
+            ret = asn1SccBase_samples_frame_Frame_Equal((&(pVal1->second)), (&(pVal2->second)));
+
+            if (ret) {
+                ret = (pVal1->id == pVal2->id);
+
+            }
+        }
+    }
+	return ret;
+
+}
+
+void asn1SccBase_samples_frame_FramePair_Initialize(asn1SccBase_samples_frame_FramePair* pVal)
+{
+
+
+	/*set time */
+	asn1SccBase_Time_Initialize((&(pVal->time)));
+	/*set first */
+	asn1SccBase_samples_frame_Frame_Initialize((&(pVal->first)));
+	/*set second */
+	asn1SccBase_samples_frame_Frame_Initialize((&(pVal->second)));
+	/*set id */
+	asn1SccT_UInt32_Initialize((&(pVal->id)));
+}
+
+flag asn1SccBase_samples_frame_FramePair_IsConstraintValid(const asn1SccBase_samples_frame_FramePair *pVal, int* pErrCode)
+{
+    flag ret = TRUE;
+    int i1;
+	
+    ret = (-9223372036854775807LL <= pVal->time.microseconds);
+    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_MICROSECONDS;
+    if (ret) {
+        ret = (-9223372036854775807LL <= pVal->first.time.microseconds);
+        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_TIME_MICROSECONDS;
+        if (ret) {
+            ret = (-9223372036854775807LL <= pVal->first.received_time.microseconds);
+            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_RECEIVED_TIME_MICROSECONDS;
+            if (ret) {
+                ret = ((1 <= pVal->first.image.nCount) && (pVal->first.image.nCount <= 200));
+                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE;
+                for(i1 = 0; ret && i1 < pVal->first.image.nCount; i1++) 
+                {
+                	ret = (pVal->first.image.arr[i1] <= 255UL);
+                	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE_ELM;
+                }
+
+                if (ret) {
+                    ret = ((1 <= pVal->first.attributes.nCount) && (pVal->first.attributes.nCount <= 200));
+                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES;
+                    for(i1 = 0; ret && i1 < pVal->first.attributes.nCount; i1++) 
+                    {
+                    	ret = ((0 <= pVal->first.attributes.arr[i1].data.nCount) && (pVal->first.attributes.arr[i1].data.nCount <= 200));
+                    	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_DATA;
+                    	if (ret) {
+                    	    ret = ((0 <= pVal->first.attributes.arr[i1].name_val.nCount) && (pVal->first.attributes.arr[i1].name_val.nCount <= 200));
+                    	    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_NAME_VAL;
+                    	}
+                    }
+
+                    if (ret) {
+                        ret = (pVal->first.size_val.width <= 65535UL);
+                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_WIDTH;
+                        if (ret) {
+                            ret = (pVal->first.size_val.height <= 65535UL);
+                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_HEIGHT;
+                        }
+                        if (ret) {
+                            ret = (pVal->first.data_depth <= 4294967295UL);
+                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_DATA_DEPTH;
+                            if (ret) {
+                                ret = (pVal->first.pixel_size <= 4294967295UL);
+                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_PIXEL_SIZE;
+                                if (ret) {
+                                    ret = (pVal->first.row_size <= 4294967295UL);
+                                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ROW_SIZE;
+                                    if (ret) {
+                                        ret = (((((((((((((((((((((((((((((((pVal->first.frame_mode == asn1Scccompressed_modes)) || ((pVal->first.frame_mode == asn1Sccmode_bayer)))) || ((pVal->first.frame_mode == asn1Sccmode_bayer_bggr)))) || ((pVal->first.frame_mode == asn1Sccmode_bayer_gbrg)))) || ((pVal->first.frame_mode == asn1Sccmode_bayer_grbg)))) || ((pVal->first.frame_mode == asn1Sccmode_bayer_rggb)))) || ((pVal->first.frame_mode == asn1Sccmode_bgr)))) || ((pVal->first.frame_mode == asn1Sccmode_grayscale)))) || ((pVal->first.frame_mode == asn1Sccmode_jpeg)))) || ((pVal->first.frame_mode == asn1Sccmode_pjpg)))) || ((pVal->first.frame_mode == asn1Sccmode_png)))) || ((pVal->first.frame_mode == asn1Sccmode_rgb)))) || ((pVal->first.frame_mode == asn1Sccmode_rgb32)))) || ((pVal->first.frame_mode == asn1Sccmode_undefined)))) || ((pVal->first.frame_mode == asn1Sccmode_uyvy)))) || ((pVal->first.frame_mode == asn1Sccraw_modes)));
+                                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_MODE;
+                                        if (ret) {
+                                            ret = (((((pVal->first.frame_status == asn1Sccstatus_empty)) || ((pVal->first.frame_status == asn1Sccstatus_invalid)))) || ((pVal->first.frame_status == asn1Sccstatus_valid)));
+                                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_STATUS;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (ret) {
+            ret = (-9223372036854775807LL <= pVal->second.time.microseconds);
+            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_TIME_MICROSECONDS;
+            if (ret) {
+                ret = (-9223372036854775807LL <= pVal->second.received_time.microseconds);
+                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_RECEIVED_TIME_MICROSECONDS;
+                if (ret) {
+                    ret = ((1 <= pVal->second.image.nCount) && (pVal->second.image.nCount <= 200));
+                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE;
+                    for(i1 = 0; ret && i1 < pVal->second.image.nCount; i1++) 
+                    {
+                    	ret = (pVal->second.image.arr[i1] <= 255UL);
+                    	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE_ELM;
+                    }
+
+                    if (ret) {
+                        ret = ((1 <= pVal->second.attributes.nCount) && (pVal->second.attributes.nCount <= 200));
+                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES;
+                        for(i1 = 0; ret && i1 < pVal->second.attributes.nCount; i1++) 
+                        {
+                        	ret = ((0 <= pVal->second.attributes.arr[i1].data.nCount) && (pVal->second.attributes.arr[i1].data.nCount <= 200));
+                        	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_DATA;
+                        	if (ret) {
+                        	    ret = ((0 <= pVal->second.attributes.arr[i1].name_val.nCount) && (pVal->second.attributes.arr[i1].name_val.nCount <= 200));
+                        	    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_NAME_VAL;
+                        	}
+                        }
+
+                        if (ret) {
+                            ret = (pVal->second.size_val.width <= 65535UL);
+                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_WIDTH;
+                            if (ret) {
+                                ret = (pVal->second.size_val.height <= 65535UL);
+                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_HEIGHT;
+                            }
+                            if (ret) {
+                                ret = (pVal->second.data_depth <= 4294967295UL);
+                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_DATA_DEPTH;
+                                if (ret) {
+                                    ret = (pVal->second.pixel_size <= 4294967295UL);
+                                    *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_PIXEL_SIZE;
+                                    if (ret) {
+                                        ret = (pVal->second.row_size <= 4294967295UL);
+                                        *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ROW_SIZE;
+                                        if (ret) {
+                                            ret = (((((((((((((((((((((((((((((((pVal->second.frame_mode == asn1Scccompressed_modes)) || ((pVal->second.frame_mode == asn1Sccmode_bayer)))) || ((pVal->second.frame_mode == asn1Sccmode_bayer_bggr)))) || ((pVal->second.frame_mode == asn1Sccmode_bayer_gbrg)))) || ((pVal->second.frame_mode == asn1Sccmode_bayer_grbg)))) || ((pVal->second.frame_mode == asn1Sccmode_bayer_rggb)))) || ((pVal->second.frame_mode == asn1Sccmode_bgr)))) || ((pVal->second.frame_mode == asn1Sccmode_grayscale)))) || ((pVal->second.frame_mode == asn1Sccmode_jpeg)))) || ((pVal->second.frame_mode == asn1Sccmode_pjpg)))) || ((pVal->second.frame_mode == asn1Sccmode_png)))) || ((pVal->second.frame_mode == asn1Sccmode_rgb)))) || ((pVal->second.frame_mode == asn1Sccmode_rgb32)))) || ((pVal->second.frame_mode == asn1Sccmode_undefined)))) || ((pVal->second.frame_mode == asn1Sccmode_uyvy)))) || ((pVal->second.frame_mode == asn1Sccraw_modes)));
+                                            *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_MODE;
+                                            if (ret) {
+                                                ret = (((((pVal->second.frame_status == asn1Sccstatus_empty)) || ((pVal->second.frame_status == asn1Sccstatus_invalid)))) || ((pVal->second.frame_status == asn1Sccstatus_valid)));
+                                                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_STATUS;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (ret) {
+                ret = (pVal->id <= 4294967295UL);
+                *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID;
+            }
+        }
+    }
+
+	return ret;
+}
+
+
+
 flag asn1SccT_Boolean_Equal(const asn1SccT_Boolean* pVal1, const asn1SccT_Boolean* pVal2)
 {
 	return (*(pVal1)) == (*(pVal2));
@@ -8008,7 +8071,16 @@ flag asn1SccT_Boolean_IsConstraintValid(const asn1SccT_Boolean* pVal, int* pErrC
 
 flag asn1SccBase_samples_SonarScan_data_Equal(const asn1SccBase_samples_SonarScan_data* pVal1, const asn1SccBase_samples_SonarScan_data* pVal2)
 {
-	return (pVal1->nCount == pVal2->nCount) && (memcmp(pVal1->arr, pVal2->arr, pVal1->nCount) ==0)	;
+	flag ret=TRUE;
+    int i1;
+
+    ret = (pVal1->nCount == pVal2->nCount);
+    for(i1 = 0; ret && i1 < pVal1->nCount; i1++) 
+    {
+    	ret = (pVal1->arr[i1] == pVal2->arr[i1]);
+    }
+
+	return ret;
 
 }
 
@@ -8087,9 +8159,14 @@ flag asn1SccBase_samples_SonarScan_Equal(const asn1SccBase_samples_SonarScan* pV
 
 void asn1SccBase_samples_SonarScan_data_Initialize(asn1SccBase_samples_SonarScan_data* pVal)
 {
+    int i1;
 
-	memset(pVal->arr, 0x0, 200);
-
+	i1 = 0;
+	while (i1< 200) {
+	    asn1SccT_UInt8_Initialize((&(pVal->arr[i1])));
+	    i1 = i1 + 1;
+	}
+	pVal->nCount = 1;
 }
 void asn1SccBase_samples_SonarScan_time_beams_Initialize(asn1SccBase_samples_SonarScan_time_beams* pVal)
 {
@@ -8144,6 +8221,12 @@ flag asn1SccBase_samples_SonarScan_IsConstraintValid(const asn1SccBase_samples_S
     if (ret) {
         ret = ((1 <= pVal->data.nCount) && (pVal->data.nCount <= 200));
         *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARSCAN_DATA;
+        for(i1 = 0; ret && i1 < pVal->data.nCount; i1++) 
+        {
+        	ret = (pVal->data.arr[i1] <= 255UL);
+        	*pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARSCAN_DATA_ELM;
+        }
+
         if (ret) {
             ret = ((1 <= pVal->time_beams.nCount) && (pVal->time_beams.nCount <= 200));
             *pErrCode = ret ? 0 :  ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS;
@@ -8195,56 +8278,6 @@ flag asn1SccBase_samples_SonarScan_IsConstraintValid(const asn1SccBase_samples_S
             }
         }
     }
-
-	return ret;
-}
-
-
-
-flag asn1SccVizkit3D_FilePath_Equal(const asn1SccVizkit3D_FilePath val1, const asn1SccVizkit3D_FilePath val2)
-{
-	return strcmp(val1, val2) == 0;
-
-}
-
-void asn1SccVizkit3D_FilePath_Initialize(asn1SccVizkit3D_FilePath val)
-{
-
-	memset(val, 0x0, 256);
-
-}
-
-flag asn1SccVizkit3D_FilePath_IsConstraintValid(const asn1SccVizkit3D_FilePath val, int* pErrCode)
-{
-    flag ret = TRUE;
-	
-    ret = (strlen(val) <= 255);
-    *pErrCode = ret ? 0 :  ERR_VIZKIT3D_FILEPATH;
-
-	return ret;
-}
-
-
-
-flag asn1SccVizkit3D_PluginLabel_Equal(const asn1SccVizkit3D_PluginLabel val1, const asn1SccVizkit3D_PluginLabel val2)
-{
-	return strcmp(val1, val2) == 0;
-
-}
-
-void asn1SccVizkit3D_PluginLabel_Initialize(asn1SccVizkit3D_PluginLabel val)
-{
-
-	memset(val, 0x0, 32);
-
-}
-
-flag asn1SccVizkit3D_PluginLabel_IsConstraintValid(const asn1SccVizkit3D_PluginLabel val, int* pErrCode)
-{
-    flag ret = TRUE;
-	
-    ret = ((1 <= strlen(val)) && (strlen(val) <= 31));
-    *pErrCode = ret ? 0 :  ERR_VIZKIT3D_PLUGINLABEL;
 
 	return ret;
 }

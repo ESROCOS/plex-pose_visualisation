@@ -46,7 +46,7 @@ SUBCOMPONENTS
     Taste::FS_Default_Value => """config-bodystate.yml""";
   };
   id : DATA DataView::Vizkit3D_PluginLabel {
-    Taste::FS_Default_Value => """robotPose""";
+    Taste::FS_Default_Value => """rbs""";
   };
   compilerOption : DATA DataView::Taste_directive {
     Taste::FS_Default_Value => "compiler-option:""-DOROCOS_TARGET=gnulinux""";
@@ -96,7 +96,7 @@ SUBCOMPONENTS
     Taste::FS_Default_Value => """config-bodystate.yml""";
   };
   id : DATA DataView::Vizkit3D_PluginLabel {
-    Taste::FS_Default_Value => """markerPose""";
+    Taste::FS_Default_Value => """mbs""";
   };
   compilerOption : DATA DataView::Taste_directive {
     Taste::FS_Default_Value => "compiler-option:""-DOROCOS_TARGET=gnulinux""";

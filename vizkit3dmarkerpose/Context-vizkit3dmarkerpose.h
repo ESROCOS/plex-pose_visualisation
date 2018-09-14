@@ -21,8 +21,8 @@ flag asn1SccContext_vizkit3dmarkerpose_Equal(const asn1SccContext_vizkit3dmarker
 
 void asn1SccContext_vizkit3dmarkerpose_Initialize(asn1SccContext_vizkit3dmarkerpose* pVal);
 
-#define ERR_CONTEXT_VIZKIT3DMARKERPOSE_CONFIGFILE		1  /**/
-#define ERR_CONTEXT_VIZKIT3DMARKERPOSE_ID		12  /**/
+#define ERR_CONTEXT_VIZKIT3D_RIGIDBODYSTATE_CONFIGFILE		1  /**/
+#define ERR_CONTEXT_VIZKIT3D_RIGIDBODYSTATE_ID		12  /**/
 flag asn1SccContext_vizkit3dmarkerpose_IsConstraintValid(const asn1SccContext_vizkit3dmarkerpose* pVal, int* pErrCode);
 
 extern const asn1SccContext_vizkit3dmarkerpose vizkit3dmarkerpose_ctxt; 
