@@ -22,10 +22,10 @@ END deploymentview::DV::Node1;
 PACKAGE deploymentview::DV
 PUBLIC
 
-WITH interfaceview::IV::PoseVisualisation::vizkit3drobotpose;
-WITH interfaceview::IV::PoseVisualisation::vizkit3dmarkerpose;
-WITH interfaceview::IV::PoseVisualisation::remapper;
 WITH interfaceview::IV::dummyproducer;
+WITH interfaceview::IV::vizkit3drobotpose;
+WITH interfaceview::IV::vizkit3dmarkerpose2;
+WITH interfaceview::IV::vizkit3dmarkerpose;
 WITH ocarina_processors_x86;
 WITH deploymentview::DV::Node1;
 WITH Taste;
@@ -37,17 +37,17 @@ END Node1;
 
 SYSTEM IMPLEMENTATION Node1.others
 SUBCOMPONENTS
-  IV_vizkit3drobotpose : SYSTEM interfaceview::IV::PoseVisualisation::vizkit3drobotpose::vizkit3drobotpose.others {
-    Taste::FunctionName => "vizkit3drobotpose";
-  };
-  IV_vizkit3dmarkerpose : SYSTEM interfaceview::IV::PoseVisualisation::vizkit3dmarkerpose::vizkit3dmarkerpose.others {
-    Taste::FunctionName => "vizkit3dmarkerpose";
-  };
-  IV_remapper : SYSTEM interfaceview::IV::PoseVisualisation::remapper::remapper.others {
-    Taste::FunctionName => "remapper";
-  };
   IV_dummyproducer : SYSTEM interfaceview::IV::dummyproducer::dummyproducer.others {
     Taste::FunctionName => "dummyproducer";
+  };
+  IV_vizkit3drobotpose : SYSTEM interfaceview::IV::vizkit3drobotpose::vizkit3drobotpose.others {
+    Taste::FunctionName => "vizkit3drobotpose";
+  };
+  IV_vizkit3dmarkerpose2 : SYSTEM interfaceview::IV::vizkit3dmarkerpose2::vizkit3dmarkerpose2.others {
+    Taste::FunctionName => "vizkit3dmarkerpose2";
+  };
+  IV_vizkit3dmarkerpose : SYSTEM interfaceview::IV::vizkit3dmarkerpose::vizkit3dmarkerpose.others {
+    Taste::FunctionName => "vizkit3dmarkerpose";
   };
   x86_partition : PROCESS deploymentview::DV::Node1::x86_partition.others {
     Taste::coordinates => "80101 69713 230411 140159";
@@ -57,10 +57,10 @@ SUBCOMPONENTS
     Taste::coordinates => "61312 49585 249200 150223";
   };
 PROPERTIES
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_vizkit3drobotpose;
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_vizkit3dmarkerpose;
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_remapper;
   Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_dummyproducer;
+  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_vizkit3drobotpose;
+  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_vizkit3dmarkerpose2;
+  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_vizkit3dmarkerpose;
   Actual_Processor_Binding => (reference (x86_linux)) APPLIES TO x86_partition;
 END Node1.others;
 

@@ -37,9 +37,9 @@ esrocos_add_dependency(PARTITION x86_partition
 ########### FOR COMPONENT PROJECTS ################
 
 #uncomment if you want to export a function
-esrocos_export_function("remapper" "share/taste_components/plex-pose_visualisation")
-esrocos_export_function("vizkit3drobotpose" "share/taste_components/plex-pose_visualisation")
-esrocos_export_function("vizkit3dmarkerpose" "share/taste_components/plex-pose_visualisation")
+esrocos_export_function("vizkit3drobotpose"   "share/taste_components/plex-pose_visualisation")
+esrocos_export_function("vizkit3dmarkerpose"  "share/taste_components/plex-pose_visualisation")
+esrocos_export_function("vizkit3dmarkerpose2" "share/taste_components/plex-pose_visualisation")
 
 #uncomment to export PKG-CONFIG-file
 esrocos_export_pkgconfig( VERSION 1.0
